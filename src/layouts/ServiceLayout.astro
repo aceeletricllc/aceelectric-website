@@ -9,6 +9,7 @@ import {
 } from '../utils/schema';
 import type { ServiceRecord } from '../data/services';
 import { getRelatedServices } from '../data/services';
+import { formatServiceExample } from '../utils/serviceExample';
 
 interface Props {
   service: ServiceRecord;
@@ -49,8 +50,7 @@ const pageJsonLd = [
       {
         service.example && (
           <p class="service-example" role="note">
-            <strong>Example:</strong>{' '}
-            {service.example.replace(/^Example:\s*/i, '')}
+            {formatServiceExample(service.example)}
           </p>
         )
       }

@@ -133,14 +133,41 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
 <script>
   const servicesItem = document.querySelector('.site-nav__item--services');
   const trigger = document.querySelector('#services-nav-trigger');
+  const dropdown = servicesItem?.querySelector('.services-dropdown');
+
+  let closeTimer;
+
+  function openServicesMenu() {
+    if (closeTimer) {
+      clearTimeout(closeTimer);
+      closeTimer = undefined;
+    }
+    servicesItem?.classList.add('is-services-open');
+    trigger?.setAttribute('aria-expanded', 'true');
+  }
+
+  function scheduleCloseServicesMenu() {
+    if (closeTimer) clearTimeout(closeTimer);
+    closeTimer = setTimeout(() => {
+      servicesItem?.classList.remove('is-services-open');
+      trigger?.setAttribute('aria-expanded', 'false');
+      closeTimer = undefined;
+    }, 280);
+  }
 
   if (servicesItem instanceof HTMLElement && trigger instanceof HTMLElement) {
-    servicesItem.addEventListener('mouseenter', () => trigger.setAttribute('aria-expanded', 'true'));
-    servicesItem.addEventListener('mouseleave', () => trigger.setAttribute('aria-expanded', 'false'));
-    trigger.addEventListener('focus', () => trigger.setAttribute('aria-expanded', 'true'));
+    servicesItem.addEventListener('mouseenter', openServicesMenu);
+    servicesItem.addEventListener('mouseleave', scheduleCloseServicesMenu);
+
+    if (dropdown instanceof HTMLElement) {
+      dropdown.addEventListener('mouseenter', openServicesMenu);
+      dropdown.addEventListener('mouseleave', scheduleCloseServicesMenu);
+    }
+
+    trigger.addEventListener('focus', openServicesMenu);
     servicesItem.addEventListener('focusout', (event) => {
       if (event.relatedTarget instanceof Node && servicesItem.contains(event.relatedTarget)) return;
-      trigger.setAttribute('aria-expanded', 'false');
+      scheduleCloseServicesMenu();
     });
   }
 
@@ -226,6 +253,16 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
     position: relative;
   }
 
+  /* Keeps hover active while moving from the link down into the panel */
+  .site-nav__item--services::after {
+    content: '';
+    position: absolute;
+    left: -0.75rem;
+    right: -0.75rem;
+    top: 100%;
+    height: 0.75rem;
+  }
+
   .site-nav__services-link {
     display: inline-flex;
     align-items: center;
@@ -237,11 +274,9 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
     display: none;
     position: absolute;
     left: 50%;
-    top: calc(100% + 0.35rem);
+    top: 100%;
     transform: translateX(-50%);
-    width: min(42rem, 92vw);
-    max-height: min(70vh, 28rem);
-    overflow: auto;
+    width: min(44rem, 92vw);
     background: var(--color-white);
     border: 2px solid var(--color-black);
     border-radius: var(--radius-lg);
@@ -250,6 +285,17 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
     z-index: 60;
   }
 
+  /* Invisible bridge so the pointer can reach the panel without leaving hover */
+  .services-dropdown::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -0.65rem;
+    height: 0.65rem;
+  }
+
+  .site-nav__item--services.is-services-open .services-dropdown,
   .site-nav__item--services:hover .services-dropdown,
   .site-nav__item--services:focus-within .services-dropdown {
     display: block;

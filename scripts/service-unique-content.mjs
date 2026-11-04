@@ -3,7 +3,7 @@ export const contentBySlug = {
   'emergency-electrical-services': {
     metaDescription:
       '24/7 response for sparking panels, partial power loss, and burning smells in Albuquerque homes and businesses.',
-    example: 'Example: restore safe power after a storm tripped the main or a branch arc at the meter.',
+    example: 'Restore safe power after a storm tripped the main or a branch arc at the meter.',
     warningSigns: [
       'You smell hot plastic or burning near the panel, outlets, or appliances.',
       'Part of the building lost power while other circuits still work.',
@@ -42,7 +42,7 @@ export const contentBySlug = {
   'electrical-panel-upgrades': {
     metaDescription:
       'Panel and service upgrades for older Albuquerque homes adding EV chargers, AC, or workshop loads.',
-    example: 'Example: replace a full 100A fuse panel with a labeled 200A breaker panel before an EV charger install.',
+    example: 'Replace a full 100A fuse panel with a labeled 200A breaker panel before an EV charger install.',
     warningSigns: [
       'The panel is warm, corroded, or uses fuses instead of modern breakers.',
       'Breakers trip when you run the dryer, AC, and kitchen at the same time.',
@@ -81,8 +81,7 @@ export const contentBySlug = {
   'electrical-code-violation-corrections': {
     metaDescription:
       'Correct NEC and local code findings from home sales, rentals, and commercial inspections in New Mexico.',
-    example:
-      'Example: fix open grounds, missing GFCI in a kitchen, and unsupported cables called out on a buyer inspection report.',
+    example: 'Fix open grounds, missing GFCI in a kitchen, and unsupported cables called out on a buyer inspection report.',
     warningSigns: [
       'You received a written list of violations from an inspector or city official.',
       'A real estate deal is on hold until electrical items are cleared.',
@@ -121,7 +120,7 @@ export const contentBySlug = {
   'ev-charger-installation': {
     metaDescription:
       'Level 2 EV charger installs with load calculations, dedicated circuits, and manufacturer-ready wiring.',
-    example: 'Example: 240V circuit from panel to garage for a Grizzl-E or ChargePoint with proper breaker size and disconnect.',
+    example: '240V circuit from panel to garage for a Grizzl-E or ChargePoint with proper breaker size and disconnect.',
     warningSigns: [
       'You ordered a charger and need a dedicated circuit the panel cannot support yet.',
       'An extension cord or 120V outlet is your only charging option today.',
@@ -160,7 +159,7 @@ export const contentBySlug = {
   'electrical-repairs': {
     metaDescription:
       'Diagnose and fix dead outlets, damaged circuits, and failing devices without unnecessary rewiring.',
-    example: 'Example: trace a dead kitchen counter circuit to a failed GFCI upstream in the garage.',
+    example: 'Trace a dead kitchen counter circuit to a failed GFCI upstream in the garage.',
     warningSigns: [
       'One room or circuit lost power while the rest of the house works.',
       'Outlets work intermittently or only when something is plugged in a certain way.',
@@ -199,7 +198,7 @@ export const contentBySlug = {
   'circuit-breaker-repair-and-replacement': {
     metaDescription:
       'Replace nuisance-tripping or overheating breakers and match the right type for your panel.',
-    example: 'Example: swap a counterfeit or wrong-brand breaker for an OEM match after repeated trips on a laundry circuit.',
+    example: 'Swap a counterfeit or wrong-brand breaker for an OEM match after repeated trips on a laundry circuit.',
     warningSigns: [
       'A breaker trips repeatedly under normal use.',
       'The breaker feels hot or smells when it trips.',
@@ -238,7 +237,7 @@ export const contentBySlug = {
   'wiring-and-rewiring': {
     metaDescription:
       'Partial or whole-home rewiring for remodels, additions, and ungrounded circuits in older Albuquerque homes.',
-    example: 'Example: rewire a kitchen remodel with new 20A small-appliance circuits and grounded boxes.',
+    example: 'Rewire a kitchen remodel with new 20A small-appliance circuits and grounded boxes.',
     warningSigns: [
       'Rooms still have two-prong outlets or ungrounded three-prong adapters.',
       'You are opening walls for a remodel and find brittle or damaged cable.',
@@ -277,7 +276,7 @@ export const contentBySlug = {
   'cloth-wiring-replacement': {
     metaDescription:
       'Replace brittle cloth-insulated branch circuits before connections fail in attics and walls.',
-    example: 'Example: replace cloth-insulated feeds to bedrooms where insulation is cracking at the panel lugs.',
+    example: 'Replace cloth-insulated feeds to bedrooms where insulation is cracking at the panel lugs.',
     warningSigns: [
       'You see frayed cloth insulation at outlets or in the attic.',
       'Insulation flakes off when devices are moved or replaced.',
@@ -316,7 +315,7 @@ export const contentBySlug = {
   'fuse-box-upgrades': {
     metaDescription:
       'Move from fuse panels to modern breaker panels with correct service capacity and labeling.',
-    example: 'Example: upgrade a 60A fuse box to a 125A or 200A breaker panel before central AC replacement.',
+    example: 'Upgrade a 60A fuse box to a 125A or 200A breaker panel before central AC replacement.',
     warningSigns: [
       'You still screw in fuses instead of resetting breakers.',
       'Fuses blow when you run modern appliances together.',
@@ -355,7 +354,7 @@ export const contentBySlug = {
   'gfci-outlet-installation': {
     metaDescription:
       'GFCI outlets and breakers for kitchens, baths, garages, and outdoor receptacles.',
-    example: 'Example: protect bathroom vanity and laundry with GFCI devices and test downstream kitchen outlets.',
+    example: 'Protect bathroom vanity and laundry with GFCI devices and test downstream kitchen outlets.',
     warningSigns: [
       'Outlets near sinks lack test/reset buttons but code expects GFCI protection.',
       'Outdoor or garage outlets are standard receptacles without weather protection.',
@@ -394,7 +393,7 @@ export const contentBySlug = {
   'electrical-inspections': {
     metaDescription:
       'Visual electrical assessments for buyers, sellers, landlords, and maintenance planning.',
-    example: 'Example: pre-listing walkthrough noting panel age, missing AFCI, and recommended smoke detector updates.',
+    example: 'Pre-listing walkthrough noting panel age, missing AFCI, and recommended smoke detector updates.',
     warningSigns: [
       'You are buying or selling and need clarity beyond a one-line inspection note.',
       'A tenant reported shocks, warm plates, or flickering lights.',
@@ -433,7 +432,7 @@ export const contentBySlug = {
   'smoke-and-carbon-monoxide-detector-installation': {
     metaDescription:
       'Hardwired and battery-backed smoke and CO detectors with correct placement and interconnection.',
-    example: 'Example: interlinked smoke/CO units on each level with bedroom hallway coverage per current guidance.',
+    example: 'Interlinked smoke/CO units on each level with bedroom hallway coverage per current guidance.',
     warningSigns: [
       'Detectors are past manufacturer date or missing where bedrooms branch off hallways.',
       'You only have battery sticks and want hardwired interconnection.',
@@ -472,7 +471,7 @@ export const contentBySlug = {
   'indoor-lighting': {
     metaDescription:
       'Recessed, pendant, and fixture lighting with dimming, switching, and load-matched LED retrofits.',
-    example: 'Example: add dimmable cans and a fan-rated box in a vaulted living room with fireplace accent lighting.',
+    example: 'Add dimmable cans and a fan-rated box in a vaulted living room with fireplace accent lighting.',
     warningSigns: [
       'Rooms feel dim or rely on a single ceiling bulb in a large space.',
       'You are remodeling and want recessed or under-cabinet lighting planned early.',
@@ -511,7 +510,7 @@ export const contentBySlug = {
   'outlets-and-switches': {
     metaDescription:
       'Add, move, or upgrade outlets and switches—including USB, tamper-resistant, and three-way layouts.',
-    example: 'Example: add a recessed media box with duplex and Ethernet behind a wall-mounted TV.',
+    example: 'Add a recessed media box with duplex and Ethernet behind a wall-mounted TV.',
     warningSigns: [
       'You need outlets where furniture or counters block existing ones.',
       'Switches control the wrong fixture or lack a three-way at both doors.',
@@ -550,7 +549,7 @@ export const contentBySlug = {
   'aluminum-wiring-replacement': {
     metaDescription:
       'Remediate or replace 1970s aluminum branch circuits with safe terminations or new copper runs.',
-    example: 'Example: replace aluminum feeds to kitchen and bath outlets with copper homeruns to the panel.',
+    example: 'Replace aluminum feeds to kitchen and bath outlets with copper homeruns to the panel.',
     warningSigns: [
       'Your home was built in the 1960s–70s and outlets show “AL” or silver-colored branch wire.',
       'Outlets or switches feel warm or show signs of overheating at screws.',
@@ -589,7 +588,7 @@ export const contentBySlug = {
   'dedicated-circuits': {
     metaDescription:
       'Dedicated lines for appliances, workshops, HVAC, and equipment that cannot share general-purpose circuits.',
-    example: 'Example: 30A circuit for a laundry pair or 20A homerun for a home office server rack.',
+    example: '30A circuit for a laundry pair or 20A homerun for a home office server rack.',
     warningSigns: [
       'Major appliances share a circuit with lights and trip the breaker often.',
       'You are installing a tankless water heater, kiln, or shop equipment with nameplate amps.',
@@ -628,7 +627,7 @@ export const contentBySlug = {
   'ceiling-fan-installation': {
     metaDescription:
       'Ceiling fan mounting on rated boxes, balancing, and switching for light kits and remotes.',
-    example: 'Example: replace a light-only box with a fan-rated brace and install a downrod fan with wall control.',
+    example: 'Replace a light-only box with a fan-rated brace and install a downrod fan with wall control.',
     warningSigns: [
       'The existing box wobbles or was never rated for fan weight.',
       'You want a fan where only a light fixture hung before.',
@@ -667,7 +666,7 @@ export const contentBySlug = {
   'led-lighting-upgrades': {
     metaDescription:
       'LED retrofits, drivers, and dimmer compatibility for lower energy use and better light quality.',
-    example: 'Example: replace halogen cans with retrofit LED trims and matched dimmers in a living area.',
+    example: 'Replace halogen cans with retrofit LED trims and matched dimmers in a living area.',
     warningSigns: [
       'Bulbs burn out quickly or flicker on existing dimmers.',
       'Recessed cans run hot or use high-wattage incandescent trims.',
@@ -706,7 +705,7 @@ export const contentBySlug = {
   'outdoor-lighting': {
     metaDescription:
       'Porch, sconce, and security-friendly exterior fixtures with weather-rated boxes and controls.',
-    example: 'Example: pair carriage lanterns on flanking garage doors with photocell and correct wet-location boxes.',
+    example: 'Pair carriage lanterns on flanking garage doors with photocell and correct wet-location boxes.',
     warningSigns: [
       'Exterior fixtures are rusted, full of water, or missing gaskets.',
       'You need lighting at entries, paths, or decks for safety.',
@@ -745,7 +744,7 @@ export const contentBySlug = {
   'landscape-lighting': {
     metaDescription:
       'Low-voltage path, accent, and tree lighting with transformers sized for your yard layout.',
-    example: 'Example: zone a front walk with path lights and uplights on cottonwoods from a timed transformer.',
+    example: 'Zone a front walk with path lights and uplights on cottonwoods from a timed transformer.',
     warningSigns: [
       'Dark walkways or steps cause trip hazards.',
       'Old landscape lights are corroded or buried splices fail after rain.',
@@ -784,7 +783,7 @@ export const contentBySlug = {
   'security-lighting': {
     metaDescription:
       'Motion floods, entry lighting, and aimed fixtures that improve visibility without light trespass.',
-    example: 'Example: dual-head LED motion floods above a garage with aimed cutoff for the street.',
+    example: 'Dual-head LED motion floods above a garage with aimed cutoff for the street.',
     warningSigns: [
       'Side yards or driveways stay dark when motion would help.',
       'Old motion sensors false-trigger or never shut off.',
@@ -823,7 +822,7 @@ export const contentBySlug = {
   'commercial-electrical-services': {
     metaDescription:
       'Tenant improvements, distribution, and maintenance for retail, office, and light industrial sites.',
-    example: 'Example: new circuits for a 480V disconnect, transformers, and safety bollards in a bay.',
+    example: 'New circuits for a 480V disconnect, transformers, and safety bollards in a bay.',
     warningSigns: [
       'Lease build-out needs power for equipment, signage, or POS.',
       'Lighting is uneven or ballasts fail across a sales floor.',
@@ -862,7 +861,7 @@ export const contentBySlug = {
   'data-and-ethernet-wiring': {
     metaDescription:
       'Cat6 and Cat6a structured cabling for offices, Wi-Fi access points, and PoE devices.',
-    example: 'Example: homerun Cat6 from a patch panel to desk drops and an access point in a ceiling.',
+    example: 'Homerun Cat6 from a patch panel to desk drops and an access point in a ceiling.',
     warningSigns: [
       'Wi-Fi mesh cannot fix dead zones caused by missing wire to AP locations.',
       'Cables are exposed, crushed in doors, or terminated with DIY keystone mistakes.',
@@ -901,7 +900,7 @@ export const contentBySlug = {
   'parking-lot-lighting': {
     metaDescription:
       'Repair and retrofit pole, shoebox, and area lighting for safer lots and facades.',
-    example: 'Example: LED retrofit on twin shoebox heads on a site pole with photocell control.',
+    example: 'LED retrofit on twin shoebox heads on a site pole with photocell control.',
     warningSigns: [
       'Dark spots in the lot or fixtures out on several poles.',
       'Tenants or customers report poor visibility at night.',
@@ -940,7 +939,7 @@ export const contentBySlug = {
   'smart-home-wiring': {
     metaDescription:
       'Neutrals, load ratings, and panel space for smart switches, panels, and hubs.',
-    example: 'Example: add neutrals in switch boxes and a dedicated circuit for a smart load center.',
+    example: 'Add neutrals in switch boxes and a dedicated circuit for a smart load center.',
     warningSigns: [
       'Smart switches flicker or will not pair because neutrals are missing.',
       'You want a smart panel but lack spaces or correct feeder capacity.',
@@ -979,7 +978,7 @@ export const contentBySlug = {
   'fixture-and-chandelier-installation': {
     metaDescription:
       'Secure mounting and wiring for chandeliers, pendants, and heavy decorative fixtures.',
-    example: 'Example: brace a dining room box for a two-tier chandelier and align switch legs for dimming.',
+    example: 'Brace a dining room box for a two-tier chandelier and align switch legs for dimming.',
     warningSigns: [
       'The fixture you bought exceeds the weight rating of the existing box.',
       'High ceilings need scaffolding or long ladders for safe mounting.',
@@ -1018,7 +1017,7 @@ export const contentBySlug = {
   'electrical-troubleshooting': {
     metaDescription:
       'Systematic diagnosis for intermittent power loss, nuisance trips, and mystery voltage drops.',
-    example: 'Example: find a loose neutral causing dimming when the AC compressor starts.',
+    example: 'Find a loose neutral causing dimming when the AC compressor starts.',
     warningSigns: [
       'Problems come and go and other contractors guessed without finding root cause.',
       'One appliance causes lights to dip or GFCI devices to trip.',

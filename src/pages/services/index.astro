@@ -4,6 +4,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import QuoteCta from '../../components/QuoteCta.astro';
 import { getServiceThumbnail } from '../../data/service-images';
 import { getAllServices } from '../../data/services';
+import { formatServiceExample } from '../../utils/serviceExample';
 
 const services = getAllServices();
 ---
@@ -18,7 +19,7 @@ const services = getAllServices();
       <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services' }]} />
       <h1>Electrical services</h1>
       <p class="lead">
-        Each service explains when it applies, how we work, and a concrete example—not boilerplate copy.
+        Each service explains when it applies, how we work, and a concrete example, not boilerplate copy.
       </p>
       <div class="service-card-grid">
         {
@@ -41,7 +42,7 @@ const services = getAllServices();
                   </h2>
                   <p class="service-card__summary">{service.summary}</p>
                   {service.example && (
-                    <p class="service-card__example">{service.example}</p>
+                    <p class="service-card__example">{formatServiceExample(service.example)}</p>
                   )}
                   <a class="service-card__link" href={`/services/${service.slug}`}>
                     View service details

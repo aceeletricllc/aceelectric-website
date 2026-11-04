@@ -41,7 +41,7 @@
       "electrical-code-violation-corrections",
       "circuit-breaker-repair-and-replacement"
     ],
-    "example": "Example: restore safe power after a storm tripped the main or a branch arc at the meter."
+    "example": "Restore safe power after a storm tripped the main or a branch arc at the meter."
   },
   {
     "slug": "electrical-panel-upgrades",
@@ -85,7 +85,7 @@
       "ev-charger-installation",
       "wiring-and-rewiring"
     ],
-    "example": "Example: replace a full 100A fuse panel with a labeled 200A breaker panel before an EV charger install."
+    "example": "Replace a full 100A fuse panel with a labeled 200A breaker panel before an EV charger install."
   },
   {
     "slug": "electrical-code-violation-corrections",
@@ -129,7 +129,7 @@
       "electrical-repairs",
       "cloth-wiring-replacement"
     ],
-    "example": "Example: fix open grounds, missing GFCI in a kitchen, and unsupported cables called out on a buyer inspection report."
+    "example": "Fix open grounds, missing GFCI in a kitchen, and unsupported cables called out on a buyer inspection report."
   },
   {
     "slug": "ev-charger-installation",
@@ -173,7 +173,7 @@
       "circuit-breaker-repair-and-replacement",
       "fuse-box-upgrades"
     ],
-    "example": "Example: 240V circuit from panel to garage for a Grizzl-E or ChargePoint with proper breaker size and disconnect."
+    "example": "240V circuit from panel to garage for a Grizzl-E or ChargePoint with proper breaker size and disconnect."
   },
   {
     "slug": "electrical-repairs",
@@ -217,7 +217,7 @@
       "wiring-and-rewiring",
       "gfci-outlet-installation"
     ],
-    "example": "Example: trace a dead kitchen counter circuit to a failed GFCI upstream in the garage."
+    "example": "Trace a dead kitchen counter circuit to a failed GFCI upstream in the garage."
   },
   {
     "slug": "circuit-breaker-repair-and-replacement",
@@ -261,7 +261,7 @@
       "cloth-wiring-replacement",
       "electrical-inspections"
     ],
-    "example": "Example: swap a counterfeit or wrong-brand breaker for an OEM match after repeated trips on a laundry circuit."
+    "example": "Swap a counterfeit or wrong-brand breaker for an OEM match after repeated trips on a laundry circuit."
   },
   {
     "slug": "wiring-and-rewiring",
@@ -305,7 +305,7 @@
       "fuse-box-upgrades",
       "smoke-and-carbon-monoxide-detector-installation"
     ],
-    "example": "Example: rewire a kitchen remodel with new 20A small-appliance circuits and grounded boxes."
+    "example": "Rewire a kitchen remodel with new 20A small-appliance circuits and grounded boxes."
   },
   {
     "slug": "cloth-wiring-replacement",
@@ -349,7 +349,7 @@
       "gfci-outlet-installation",
       "indoor-lighting"
     ],
-    "example": "Example: replace cloth-insulated feeds to bedrooms where insulation is cracking at the panel lugs."
+    "example": "Replace cloth-insulated feeds to bedrooms where insulation is cracking at the panel lugs."
   },
   {
     "slug": "fuse-box-upgrades",
@@ -393,7 +393,7 @@
       "electrical-inspections",
       "outlets-and-switches"
     ],
-    "example": "Example: upgrade a 60A fuse box to a 125A or 200A breaker panel before central AC replacement."
+    "example": "Upgrade a 60A fuse box to a 125A or 200A breaker panel before central AC replacement."
   },
   {
     "slug": "gfci-outlet-installation",
@@ -437,7 +437,7 @@
       "smoke-and-carbon-monoxide-detector-installation",
       "aluminum-wiring-replacement"
     ],
-    "example": "Example: protect bathroom vanity and laundry with GFCI devices and test downstream kitchen outlets."
+    "example": "Protect bathroom vanity and laundry with GFCI devices and test downstream kitchen outlets."
   },
   {
     "slug": "electrical-inspections",
@@ -481,7 +481,7 @@
       "indoor-lighting",
       "dedicated-circuits"
     ],
-    "example": "Example: pre-listing walkthrough noting panel age, missing AFCI, and recommended smoke detector updates."
+    "example": "Pre-listing walkthrough noting panel age, missing AFCI, and recommended smoke detector updates."
   },
   {
     "slug": "smoke-and-carbon-monoxide-detector-installation",
@@ -525,7 +525,7 @@
       "outlets-and-switches",
       "ceiling-fan-installation"
     ],
-    "example": "Example: interlinked smoke/CO units on each level with bedroom hallway coverage per current guidance."
+    "example": "Interlinked smoke/CO units on each level with bedroom hallway coverage per current guidance."
   },
   {
     "slug": "indoor-lighting",
@@ -569,7 +569,7 @@
       "aluminum-wiring-replacement",
       "led-lighting-upgrades"
     ],
-    "example": "Example: add dimmable cans and a fan-rated box in a vaulted living room with fireplace accent lighting."
+    "example": "Add dimmable cans and a fan-rated box in a vaulted living room with fireplace accent lighting."
   },
   {
     "slug": "outlets-and-switches",
@@ -613,7 +613,7 @@
       "dedicated-circuits",
       "outdoor-lighting"
     ],
-    "example": "Example: add a recessed media box with duplex and Ethernet behind a wall-mounted TV."
+    "example": "Add a recessed media box with duplex and Ethernet behind a wall-mounted TV."
   },
   {
     "slug": "aluminum-wiring-replacement",
@@ -657,7 +657,7 @@
       "ceiling-fan-installation",
       "landscape-lighting"
     ],
-    "example": "Example: replace aluminum feeds to kitchen and bath outlets with copper homeruns to the panel."
+    "example": "Replace aluminum feeds to kitchen and bath outlets with copper homeruns to the panel."
   },
   {
     "slug": "dedicated-circuits",
@@ -701,7 +701,7 @@
       "led-lighting-upgrades",
       "security-lighting"
     ],
-    "example": "Example: 30A circuit for a laundry pair or 20A homerun for a home office server rack."
+    "example": "30A circuit for a laundry pair or 20A homerun for a home office server rack."
   },
   {
     "slug": "ceiling-fan-installation",
@@ -745,7 +745,7 @@
       "outdoor-lighting",
       "commercial-electrical-services"
     ],
-    "example": "Example: replace a light-only box with a fan-rated brace and install a downrod fan with wall control."
+    "example": "Replace a light-only box with a fan-rated brace and install a downrod fan with wall control."
   },
   {
     "slug": "led-lighting-upgrades",
@@ -789,7 +789,7 @@
       "landscape-lighting",
       "data-and-ethernet-wiring"
     ],
-    "example": "Example: replace halogen cans with retrofit LED trims and matched dimmers in a living area."
+    "example": "Replace halogen cans with retrofit LED trims and matched dimmers in a living area."
   },
   {
     "slug": "outdoor-lighting",
@@ -833,7 +833,7 @@
       "security-lighting",
       "parking-lot-lighting"
     ],
-    "example": "Example: pair carriage lanterns on flanking garage doors with photocell and correct wet-location boxes."
+    "example": "Pair carriage lanterns on flanking garage doors with photocell and correct wet-location boxes."
   },
   {
     "slug": "landscape-lighting",
@@ -877,7 +877,7 @@
       "commercial-electrical-services",
       "smart-home-wiring"
     ],
-    "example": "Example: zone a front walk with path lights and uplights on cottonwoods from a timed transformer."
+    "example": "Zone a front walk with path lights and uplights on cottonwoods from a timed transformer."
   },
   {
     "slug": "security-lighting",
@@ -921,7 +921,7 @@
       "data-and-ethernet-wiring",
       "fixture-and-chandelier-installation"
     ],
-    "example": "Example: dual-head LED motion floods above a garage with aimed cutoff for the street."
+    "example": "Dual-head LED motion floods above a garage with aimed cutoff for the street."
   },
   {
     "slug": "commercial-electrical-services",
@@ -965,7 +965,7 @@
       "parking-lot-lighting",
       "electrical-troubleshooting"
     ],
-    "example": "Example: new circuits for a 480V disconnect, transformers, and safety bollards in a bay."
+    "example": "New circuits for a 480V disconnect, transformers, and safety bollards in a bay."
   },
   {
     "slug": "data-and-ethernet-wiring",
@@ -1009,7 +1009,7 @@
       "smart-home-wiring",
       "emergency-electrical-services"
     ],
-    "example": "Example: homerun Cat6 from a patch panel to desk drops and an access point in a ceiling."
+    "example": "Homerun Cat6 from a patch panel to desk drops and an access point in a ceiling."
   },
   {
     "slug": "parking-lot-lighting",
@@ -1053,7 +1053,7 @@
       "fixture-and-chandelier-installation",
       "electrical-panel-upgrades"
     ],
-    "example": "Example: LED retrofit on twin shoebox heads on a site pole with photocell control."
+    "example": "LED retrofit on twin shoebox heads on a site pole with photocell control."
   },
   {
     "slug": "smart-home-wiring",
@@ -1097,7 +1097,7 @@
       "electrical-troubleshooting",
       "electrical-code-violation-corrections"
     ],
-    "example": "Example: add neutrals in switch boxes and a dedicated circuit for a smart load center."
+    "example": "Add neutrals in switch boxes and a dedicated circuit for a smart load center."
   },
   {
     "slug": "fixture-and-chandelier-installation",
@@ -1141,7 +1141,7 @@
       "emergency-electrical-services",
       "ev-charger-installation"
     ],
-    "example": "Example: brace a dining room box for a two-tier chandelier and align switch legs for dimming."
+    "example": "Brace a dining room box for a two-tier chandelier and align switch legs for dimming."
   },
   {
     "slug": "electrical-troubleshooting",
@@ -1185,6 +1185,6 @@
       "electrical-panel-upgrades",
       "electrical-repairs"
     ],
-    "example": "Example: find a loose neutral causing dimming when the AC compressor starts."
+    "example": "Find a loose neutral causing dimming when the AC compressor starts."
   }
 ]

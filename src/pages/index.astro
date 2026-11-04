@@ -4,6 +4,7 @@ import QuoteCta from '../components/QuoteCta.astro';
 import { business } from '../config/business';
 import { site } from '../config/site';
 import { getAllServices } from '../data/services';
+import { formatServiceExample } from '../utils/serviceExample';
 import { isConfigured } from '../utils/config';
 
 const featuredSlugs = [
@@ -46,13 +47,13 @@ const featured = featuredSlugs
     </div>
   </section>
 
-  <section class="section section--skyline">
-    <div class="container section--skyline__inner">
-      <div class="section--skyline__intro">
+  <section class="section">
+    <div class="container">
+      <div class="home-intro">
         <h2>Electrical work sized to the building</h2>
         <p class="lead">
           A Nob Hill casita, a Central Avenue retail bay, and a Rio Rancho family home do not share the
-          same panel, lighting, or code history. We scope each job from how the property is used—not a
+          same panel, lighting, or code history. We scope each job from how the property is used, not a
           generic checklist.
         </p>
       </div>
@@ -64,7 +65,9 @@ const featured = featuredSlugs
                 <a href={`/services/${service.slug}`}>{service.title}</a>
               </h3>
               <p>{service.summary}</p>
-              {service.example && <p class="card__example">{service.example}</p>}
+              {service.example && (
+                <p class="card__example">{formatServiceExample(service.example)}</p>
+              )}
               <p>
                 <a href={`/services/${service.slug}`}>Learn more</a>
               </p>
