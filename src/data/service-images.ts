@@ -9,18 +9,12 @@ export interface ServiceThumb {
   height: number;
 }
 
-type ThumbMeta = Record<string, { file: string; width: number; height: number; kind: string }>;
+type ThumbMeta = Record<
+  string,
+  { file: string; width: number; height: number; kind: string; pexelsId?: number }
+>;
 
 const thumbsMeta = meta as ThumbMeta;
-
-const photoAlt: Record<string, string> = {
-  'circuit-breaker-repair-and-replacement':
-    'Electrician servicing a breaker panel during repair work',
-  'commercial-electrical-services':
-    'Commercial 480V transformer disconnect with safety labeling',
-  'gfci-outlet-installation':
-    'Mechanical timer and wiring at electrical control terminals',
-};
 
 export function getServiceThumbnail(slug: string, service?: ServiceRecord): ServiceThumb {
   const entry = thumbsMeta[slug];
@@ -29,21 +23,16 @@ export function getServiceThumbnail(slug: string, service?: ServiceRecord): Serv
 
   if (!entry) {
     return {
-      src: `/images/services/thumbs/${slug}.svg`,
-      alt: `Illustration for ${title}`,
-      width: 480,
-      height: 360,
+      src: `/images/services/thumbs/${slug}.jpg`,
+      alt: `Photo representing ${title}`,
+      width: 640,
+      height: 480,
     };
   }
 
-  const alt =
-    entry.kind === 'photo'
-      ? (photoAlt[slug] ?? `Project photo related to ${title}`)
-      : `Stylized illustration representing ${title}`;
-
   return {
     src: `/images/services/thumbs/${entry.file}`,
-    alt,
+    alt: `Stock photo illustrating ${title}`,
     width: entry.width,
     height: entry.height,
   };

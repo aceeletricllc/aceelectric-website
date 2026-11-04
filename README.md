@@ -56,6 +56,13 @@ Adjust copy in `scripts/generate-services.mjs` or edit `entries.json` directly, 
 2. Update [`src/data/gallery.ts`](src/data/gallery.ts) with paths, dimensions, alt text, captions, and categories.
 3. Run `npm run build`.
 
+## Service card thumbnails (Pexels stock)
+
+Each service uses a unique photo in `public/images/services/thumbs/{slug}.jpg`.
+
+- Re-download all thumbnails: `node scripts/download-service-stock-photos.mjs`
+- Photo credits: [`public/images/services/ATTRIBUTION.md`](public/images/services/ATTRIBUTION.md) (Pexels License)
+
 ## Formspree quote form
 
 1. Create a form at [Formspree](https://formspree.io).
