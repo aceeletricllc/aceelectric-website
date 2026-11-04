@@ -5,7 +5,7 @@ export const site = {
   name: business.displayName,
   defaultTitle: `${business.displayName} | Licensed Electrical Services`,
   defaultDescription:
-    'Professional residential and commercial electrical services. Panel upgrades, repairs, lighting, EV chargers, and more. Request a quote today.',
+    'Ace Electric LLC provides licensed residential and commercial electrical services in Albuquerque, New Mexico and the Southwest. Panel upgrades, repairs, lighting, EV chargers, and more.',
   defaultOgImage: '/images/brand/ace-electric-logo.png',
   twitterHandle: null as string | null,
   logo: {

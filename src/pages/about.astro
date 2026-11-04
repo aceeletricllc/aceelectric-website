@@ -3,32 +3,54 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import QuoteCta from '../components/QuoteCta.astro';
 import { business } from '../config/business';
+import { site } from '../config/site';
 import { isConfigured } from '../utils/config';
 ---
 
 <BaseLayout
   title="About Ace Electric LLC"
-  description="Learn about Ace Electric LLC—our approach to safe electrical work, communication, and long-term reliability for homes and businesses."
+  description="Ace Electric LLC is an established electrical contractor in Albuquerque, New Mexico, serving homeowners and businesses across the Southwest."
   path="/about"
 >
   <section class="section">
-    <div class="container prose">
+    <div class="container prose about">
       <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
+      <div class="about__logo-wrap">
+        <img
+          class="about__logo"
+          src={site.logo.src}
+          alt={site.logo.alt}
+          width={site.logo.width}
+          height={site.logo.height}
+          loading="eager"
+        />
+      </div>
       <h1>About {business.displayName}</h1>
       <p class="lead">
-        We are a professional electrical contractor focused on safe installations, honest scopes of work,
-        and respectful service at your property.
+        Ace Electric LLC is an established electrical contractor based in Albuquerque, New Mexico. For
+        years we have served homeowners, businesses, and property managers across the Albuquerque metro
+        and the broader Southwest with dependable power solutions and clear communication.
       </p>
+
+      <section aria-labelledby="roots">
+        <h2 id="roots">Rooted in New Mexico</h2>
+        <p>
+          Our team understands desert climate, local construction styles, and the day-to-day electrical
+          needs of properties throughout the region. From panel upgrades and troubleshooting to lighting
+          and commercial service work, we focus on safe installations that stand up to real-world use.
+        </p>
+        <p>
+          Whether you are updating an older home, preparing a commercial space, or responding to an
+          inspection item, we explain options in plain language and provide written quotes before billed
+          work begins.
+        </p>
+      </section>
 
       <section aria-labelledby="approach">
         <h2 id="approach">Our approach</h2>
         <p>
           Electrical systems should be easy to understand and safe to live with. We take time to inspect,
-          explain findings, and document what we recommend before turning circuits back on.
-        </p>
-        <p>
-          Whether you need a single device replaced or a panel upgrade that supports modern loads, we
-          coordinate scheduling, materials, and inspections when they apply to your project.
+          document findings, and coordinate permits and inspections when they apply to your project.
         </p>
       </section>
 
@@ -36,34 +58,37 @@ import { isConfigured } from '../utils/config';
         <h2 id="credentials">Credentials & coverage</h2>
         <ul>
           {
-            isConfigured(business.licenseNumber) ? (
-              <li>License: {business.licenseNumber}</li>
-            ) : (
-              <li>License information will be published here once confirmed in site configuration.</li>
+            isConfigured(business.licenseNumber) && (
+              <li>New Mexico electrical license #{business.licenseNumber}</li>
             )
           }
           {
-            isConfigured(business.insuranceStatus) ? (
-              <li>{business.insuranceStatus}</li>
-            ) : (
-              <li>Insurance details will be published here once confirmed in site configuration.</li>
-            )
-          }
-          {
-            isConfigured(business.yearsInBusiness) && <li>{business.yearsInBusiness}</li>
+            isConfigured(business.insuranceStatus) && <li>{business.insuranceStatus}</li>
           }
         </ul>
       </section>
 
-      {
-        business.serviceAreas.length > 0 && (
-          <section aria-labelledby="service-area">
-            <h2 id="service-area">Service area</h2>
-            <p>We serve: {business.serviceAreas.join(', ')}.</p>
-          </section>
-        )
-      }
+      <section aria-labelledby="service-area">
+        <h2 id="service-area">Service area</h2>
+        <p>
+          We are proud to serve {business.primaryCity}, {business.primaryState} and surrounding
+          communities, including {business.serviceAreas.slice(0, -1).join(', ')}, and{' '}
+          {business.serviceAreas.at(-1)}.
+        </p>
+      </section>
     </div>
   </section>
   <QuoteCta heading="Talk with our team" text="Share your project goals and we will outline next steps." />
 </BaseLayout>
+
+<style>
+  .about__logo-wrap {
+    margin-bottom: var(--space-xl);
+  }
+
+  .about__logo {
+    width: min(100%, 36rem);
+    height: auto;
+    max-width: none;
+  }
+</style>

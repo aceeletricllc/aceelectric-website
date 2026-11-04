@@ -19,15 +19,21 @@ export const business = {
   addressRegion: 'TODO: add state abbreviation' as ConfigValue,
   postalCode: 'TODO: add ZIP' as ConfigValue,
 
-  primaryCity: 'TODO: add primary service city' as ConfigValue,
-  primaryState: 'TODO: add primary service state' as ConfigValue,
+  primaryCity: 'Albuquerque' as ConfigValue,
+  primaryState: 'New Mexico' as ConfigValue,
   /** Comma-separated or list of neighborhoods/cities served */
-  serviceAreas: [] as string[],
+  serviceAreas: [
+    'Albuquerque',
+    'Rio Rancho',
+    'Santa Fe',
+    'Los Lunas',
+    'Belen',
+    'Surrounding communities across the Southwest',
+  ],
 
   businessHours: 'TODO: add business hours (e.g. Mon–Fri 8am–5pm)' as ConfigValue,
-  licenseNumber: 'TODO: add electrical license number' as ConfigValue,
-  /** e.g. "Fully insured" — only shown when not TODO */
-  insuranceStatus: 'TODO: add insurance status wording' as ConfigValue,
+  licenseNumber: '404693' as ConfigValue,
+  insuranceStatus: 'Insured and bonded' as ConfigValue,
   /** e.g. "24/7 emergency service available" — only when verified */
   emergencyServiceAvailability: 'TODO: confirm emergency service availability' as ConfigValue,
   yearsInBusiness: 'TODO: add years in business if you want it published' as ConfigValue,

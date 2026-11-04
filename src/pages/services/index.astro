@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import QuoteCta from '../../components/QuoteCta.astro';
+import { getServiceThumbnail } from '../../data/service-images';
 import { getAllServices } from '../../data/services';
 
 const services = getAllServices();
@@ -9,7 +10,7 @@ const services = getAllServices();
 
 <BaseLayout
   title="Electrical services"
-  description="Explore residential and commercial electrical services from Ace Electric LLC—repairs, upgrades, lighting, EV charging, inspections, and more."
+  description="Explore residential and commercial electrical services from Ace Electric LLC in Albuquerque and the Southwest—repairs, upgrades, lighting, EV charging, and more."
   path="/services"
 >
   <section class="section">
@@ -19,17 +20,33 @@ const services = getAllServices();
       <p class="lead">
         Select a service to learn common warning signs, our process, and related work we perform.
       </p>
-      <div class="card-grid">
+      <div class="service-card-grid">
         {
-          services.map((service) => (
-            <article class="card">
-              <h2 class="card__title">
-                <a href={`/services/${service.slug}`}>{service.title}</a>
-              </h2>
-              <p>{service.metaDescription}</p>
-              <a href={`/services/${service.slug}`}>View service details</a>
-            </article>
-          ))
+          services.map((service) => {
+            const thumb = getServiceThumbnail(service.slug);
+            return (
+              <article class="service-card">
+                <a class="service-card__media" href={`/services/${service.slug}`}>
+                  <img
+                    src={thumb.src}
+                    alt={thumb.alt}
+                    width={thumb.width}
+                    height={thumb.height}
+                    loading="lazy"
+                  />
+                </a>
+                <div class="service-card__body">
+                  <h2 class="service-card__title">
+                    <a href={`/services/${service.slug}`}>{service.title}</a>
+                  </h2>
+                  <p>{service.metaDescription}</p>
+                  <a class="service-card__link" href={`/services/${service.slug}`}>
+                    View service details
+                  </a>
+                </div>
+              </article>
+            );
+          })
         }
       </div>
     </div>
@@ -38,7 +55,64 @@ const services = getAllServices();
 </BaseLayout>
 
 <style>
-  .card__title {
+  .service-card-grid {
+    display: grid;
+    gap: var(--space-lg);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+  }
+
+  .service-card {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgb(0 0 0 / 8%);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-card__media {
+    display: block;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--color-navy-800);
+  }
+
+  .service-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .service-card__body {
+    padding: var(--space-lg);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-card__title {
     font-size: 1.125rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .service-card__title a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .service-card__title a:hover {
+    color: var(--color-primary);
+  }
+
+  .service-card__body p {
+    font-size: 0.9375rem;
+    color: var(--color-charcoal);
+    flex: 1;
+  }
+
+  .service-card__link {
+    font-weight: 600;
+    margin-top: var(--space-md);
   }
 </style>
