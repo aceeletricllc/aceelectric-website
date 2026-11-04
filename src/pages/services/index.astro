@@ -23,7 +23,7 @@ const services = getAllServices();
       <div class="service-card-grid">
         {
           services.map((service) => {
-            const thumb = getServiceThumbnail(service.slug);
+            const thumb = getServiceThumbnail(service.slug, service);
             return (
               <article class="service-card">
                 <a class="service-card__media" href={`/services/${service.slug}`}>

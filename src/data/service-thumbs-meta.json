@@ -1,0 +1,164 @@
+{
+  "emergency-electrical-services": {
+    "file": "emergency-electrical-services.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "electrical-panel-upgrades": {
+    "file": "electrical-panel-upgrades.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "electrical-code-violation-corrections": {
+    "file": "electrical-code-violation-corrections.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "ev-charger-installation": {
+    "file": "ev-charger-installation.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "electrical-repairs": {
+    "file": "electrical-repairs.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "circuit-breaker-repair-and-replacement": {
+    "file": "circuit-breaker-repair-and-replacement.jpg",
+    "width": 768,
+    "height": 1024,
+    "kind": "photo"
+  },
+  "wiring-and-rewiring": {
+    "file": "wiring-and-rewiring.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "cloth-wiring-replacement": {
+    "file": "cloth-wiring-replacement.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "fuse-box-upgrades": {
+    "file": "fuse-box-upgrades.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "gfci-outlet-installation": {
+    "file": "gfci-outlet-installation.jpg",
+    "width": 768,
+    "height": 1024,
+    "kind": "photo"
+  },
+  "electrical-inspections": {
+    "file": "electrical-inspections.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "smoke-and-carbon-monoxide-detector-installation": {
+    "file": "smoke-and-carbon-monoxide-detector-installation.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "indoor-lighting": {
+    "file": "indoor-lighting.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "outlets-and-switches": {
+    "file": "outlets-and-switches.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "aluminum-wiring-replacement": {
+    "file": "aluminum-wiring-replacement.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "dedicated-circuits": {
+    "file": "dedicated-circuits.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "ceiling-fan-installation": {
+    "file": "ceiling-fan-installation.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "led-lighting-upgrades": {
+    "file": "led-lighting-upgrades.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "outdoor-lighting": {
+    "file": "outdoor-lighting.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "landscape-lighting": {
+    "file": "landscape-lighting.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "security-lighting": {
+    "file": "security-lighting.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "commercial-electrical-services": {
+    "file": "commercial-electrical-services.jpg",
+    "width": 768,
+    "height": 1024,
+    "kind": "photo"
+  },
+  "data-and-ethernet-wiring": {
+    "file": "data-and-ethernet-wiring.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "parking-lot-lighting": {
+    "file": "parking-lot-lighting.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "smart-home-wiring": {
+    "file": "smart-home-wiring.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "fixture-and-chandelier-installation": {
+    "file": "fixture-and-chandelier-installation.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  },
+  "electrical-troubleshooting": {
+    "file": "electrical-troubleshooting.svg",
+    "width": 480,
+    "height": 360,
+    "kind": "svg"
+  }
+}

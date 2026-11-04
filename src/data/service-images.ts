@@ -1,4 +1,7 @@
-/** Local thumbnail paths for service cards and nav (480×360 sources). */
+import type { ServiceRecord } from './services/types';
+import { getServiceBySlug } from './services';
+import meta from './service-thumbs-meta.json';
+
 export interface ServiceThumb {
   src: string;
   alt: string;
@@ -6,106 +9,42 @@ export interface ServiceThumb {
   height: number;
 }
 
-const thumbs = {
-  panel: {
-    src: '/images/services/thumbs/panel.jpg',
-    alt: 'Electrician working at an electrical panel',
-    width: 768,
-    height: 1024,
-  },
-  emergency: {
-    src: '/images/services/thumbs/emergency.jpg',
-    alt: 'Electrician performing electrical repair work',
-    width: 480,
-    height: 360,
-  },
-  wiring: {
-    src: '/images/services/thumbs/wiring.jpg',
-    alt: 'Electrical wiring and cable installation',
-    width: 480,
-    height: 360,
-  },
-  ev: {
-    src: '/images/services/thumbs/ev-charger.jpg',
-    alt: 'Electric vehicle charging equipment',
-    width: 480,
-    height: 360,
-  },
-  lighting: {
-    src: '/images/services/thumbs/lighting.jpg',
-    alt: 'Modern indoor lighting installation',
-    width: 480,
-    height: 360,
-  },
-  outdoor: {
-    src: '/images/services/thumbs/outdoor-light.jpg',
-    alt: 'Outdoor security and landscape lighting',
-    width: 480,
-    height: 360,
-  },
-  commercial: {
-    src: '/images/services/thumbs/commercial-site.jpg',
-    alt: 'Commercial electrical disconnect equipment',
-    width: 768,
-    height: 1024,
-  },
-  commercialStock: {
-    src: '/images/services/thumbs/commercial.jpg',
-    alt: 'Commercial building electrical work',
-    width: 480,
-    height: 360,
-  },
-  inspection: {
-    src: '/images/services/thumbs/inspection.jpg',
-    alt: 'Electrical inspection and testing equipment',
-    width: 480,
-    height: 360,
-  },
-  controls: {
-    src: '/images/services/thumbs/controls.jpg',
-    alt: 'Mechanical timer and control wiring',
-    width: 768,
-    height: 1024,
-  },
-  smart: {
-    src: '/images/services/thumbs/smart-home.jpg',
-    alt: 'Smart home devices and connected controls',
-    width: 480,
-    height: 360,
-  },
-} satisfies Record<string, ServiceThumb>;
+type ThumbMeta = Record<string, { file: string; width: number; height: number; kind: string }>;
 
-const slugToThumbKey: Record<string, keyof typeof thumbs> = {
-  'emergency-electrical-services': 'emergency',
-  'electrical-panel-upgrades': 'panel',
-  'electrical-code-violation-corrections': 'inspection',
-  'ev-charger-installation': 'ev',
-  'electrical-repairs': 'emergency',
-  'circuit-breaker-repair-and-replacement': 'panel',
-  'wiring-and-rewiring': 'wiring',
-  'cloth-wiring-replacement': 'wiring',
-  'fuse-box-upgrades': 'panel',
-  'gfci-outlet-installation': 'controls',
-  'electrical-inspections': 'inspection',
-  'smoke-and-carbon-monoxide-detector-installation': 'inspection',
-  'indoor-lighting': 'lighting',
-  'outlets-and-switches': 'controls',
-  'aluminum-wiring-replacement': 'wiring',
-  'dedicated-circuits': 'panel',
-  'ceiling-fan-installation': 'lighting',
-  'led-lighting-upgrades': 'lighting',
-  'outdoor-lighting': 'outdoor',
-  'landscape-lighting': 'outdoor',
-  'security-lighting': 'outdoor',
-  'commercial-electrical-services': 'commercial',
-  'data-and-ethernet-wiring': 'commercialStock',
-  'parking-lot-lighting': 'outdoor',
-  'smart-home-wiring': 'smart',
-  'fixture-and-chandelier-installation': 'lighting',
-  'electrical-troubleshooting': 'inspection',
+const thumbsMeta = meta as ThumbMeta;
+
+const photoAlt: Record<string, string> = {
+  'circuit-breaker-repair-and-replacement':
+    'Electrician servicing a breaker panel during repair work',
+  'commercial-electrical-services':
+    'Commercial 480V transformer disconnect with safety labeling',
+  'gfci-outlet-installation':
+    'Mechanical timer and wiring at electrical control terminals',
 };
 
-export function getServiceThumbnail(slug: string): ServiceThumb {
-  const key = slugToThumbKey[slug] ?? 'emergency';
-  return thumbs[key];
+export function getServiceThumbnail(slug: string, service?: ServiceRecord): ServiceThumb {
+  const entry = thumbsMeta[slug];
+  const record = service ?? getServiceBySlug(slug);
+  const title = record?.title ?? slug;
+
+  if (!entry) {
+    return {
+      src: `/images/services/thumbs/${slug}.svg`,
+      alt: `Illustration for ${title}`,
+      width: 480,
+      height: 360,
+    };
+  }
+
+  const alt =
+    entry.kind === 'photo'
+      ? (photoAlt[slug] ?? `Project photo related to ${title}`)
+      : `Stylized illustration representing ${title}`;
+
+  return {
+    src: `/images/services/thumbs/${entry.file}`,
+    alt,
+    width: entry.width,
+    height: entry.height,
+  };
 }
