@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Thank you"
+  description="Thanks for contacting Ace Electric LLC. We received your quote request."
+  path="/thank-you"
+  noindex={true}
+>
+  <section class="section">
+    <div class="container container--narrow">
+      <h1>Thank you</h1>
+      <p class="lead">
+        Your message was submitted successfully. We will review your project details and respond using
+        your preferred contact method during business hours.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/">Return home</a>
+        <a class="btn btn--outline" href="/services">Browse services</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

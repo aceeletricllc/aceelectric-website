@@ -1,0 +1,62 @@
+---
+interface Props {
+  heading?: string;
+  text?: string;
+}
+
+const {
+  heading = 'Ready for a clear quote?',
+  text = 'Tell us about your project and preferred contact method. We respond during business hours once your details are configured on this site.',
+} = Astro.props;
+---
+
+<section class="quote-cta" aria-labelledby="quote-cta-heading">
+  <div class="container quote-cta__inner">
+    <div>
+      <h2 id="quote-cta-heading">{heading}</h2>
+      <p>{text}</p>
+    </div>
+    <div class="btn-row">
+      <a class="btn btn--primary" href="/contact">Request a Quote</a>
+      <a class="btn btn--outline" href="/services">Browse services</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .quote-cta {
+    background: linear-gradient(
+      135deg,
+      var(--color-black),
+      var(--color-navy-800) 55%,
+      rgb(178 34 34 / 35%)
+    );
+    color: var(--color-white);
+    padding-block: var(--space-2xl);
+  }
+
+  .quote-cta__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-lg);
+  }
+
+  .quote-cta p {
+    max-width: 36rem;
+    color: var(--color-muted);
+    margin-bottom: 0;
+  }
+
+  .quote-cta .btn--outline {
+    border-color: var(--color-accent);
+    color: var(--color-white);
+    background: transparent;
+  }
+
+  .quote-cta .btn--outline:hover {
+    background: rgb(230 184 0 / 14%);
+    color: var(--color-white);
+  }
+</style>

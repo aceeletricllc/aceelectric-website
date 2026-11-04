@@ -1,0 +1,206 @@
+---
+import { business } from '../config/business';
+import { mainNav, site } from '../config/site';
+import { formatTelHref, isConfigured } from '../utils/config';
+
+const phoneReady = isConfigured(business.phone);
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-logo" href="/">
+      <img
+        class="site-logo__img"
+        src={site.logo.src}
+        alt={site.logo.alt}
+        width={site.logo.width}
+        height={site.logo.height}
+        decoding="async"
+      />
+      <span class="visually-hidden">{business.displayName}</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="site-nav__list">
+        {
+          mainNav.map((item) => {
+            const href = item.href === '/' ? '/' : item.href;
+            const normalized = href.replace(/\/$/, '') || '/';
+            const isCurrent = currentPath === normalized;
+            return (
+              <li>
+                <a href={href} aria-current={isCurrent ? 'page' : undefined}>
+                  {item.label}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      {
+        phoneReady && (
+          <a class="btn btn--outline site-header__call" href={formatTelHref(business.phone)}>
+            Call
+          </a>
+        )
+      }
+      <a class="btn btn--primary" href="/contact">Request a Quote</a>
+    </div>
+
+    <details class="site-nav-mobile">
+      <summary class="site-nav-mobile__toggle">
+        <span class="visually-hidden">Open menu</span>
+        <span aria-hidden="true">Menu</span>
+      </summary>
+      <div class="site-nav-mobile__panel">
+        <ul>
+          {
+            mainNav.map((item) => (
+              <li>
+                <a href={item.href}>{item.label}</a>
+              </li>
+            ))
+          }
+        </ul>
+        <div class="btn-row">
+          {
+            phoneReady && (
+              <a class="btn btn--outline" href={formatTelHref(business.phone)}>
+                Call
+              </a>
+            )
+          }
+          <a class="btn btn--primary" href="/contact">Request a Quote</a>
+        </div>
+      </div>
+    </details>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--color-white);
+    color: var(--color-black);
+    box-shadow: var(--shadow-sm);
+    border-bottom: 4px solid var(--color-black);
+  }
+
+  .site-header a {
+    color: var(--color-black);
+    text-decoration: none;
+  }
+
+  .site-header a:hover {
+    color: var(--color-primary);
+  }
+
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    min-height: var(--header-height);
+  }
+
+  .site-logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+
+  .site-logo__img {
+    width: auto;
+    height: 3.25rem;
+    max-width: min(220px, 55vw);
+  }
+
+  .site-nav__list {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: var(--space-lg);
+  }
+
+  .site-nav__list a[aria-current='page'] {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  .site-header__actions {
+    display: none;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .site-header__call {
+    color: var(--color-black);
+  }
+
+  .site-nav-mobile {
+    position: relative;
+  }
+
+  .site-nav-mobile__toggle {
+    list-style: none;
+    cursor: pointer;
+    min-height: 3rem;
+    min-width: 3rem;
+    display: grid;
+    place-items: center;
+    border: 2px solid var(--color-black);
+    border-radius: var(--radius-md);
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+    color: var(--color-black);
+  }
+
+  .site-nav-mobile__toggle::-webkit-details-marker {
+    display: none;
+  }
+
+  .site-nav-mobile__panel {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.5rem);
+    width: min(18rem, 90vw);
+    background: var(--color-white);
+    color: var(--color-black);
+    border: 2px solid var(--color-black);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-md);
+  }
+
+  .site-nav-mobile__panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-md);
+  }
+
+  .site-nav-mobile__panel li a {
+    display: block;
+    padding: 0.625rem 0;
+    min-height: 2.75rem;
+  }
+
+  @media (min-width: 960px) {
+    .site-nav__list {
+      display: flex;
+    }
+
+    .site-header__actions {
+      display: flex;
+    }
+
+    .site-nav-mobile {
+      display: none;
+    }
+  }
+</style>

@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteCta from '../components/QuoteCta.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import { business } from '../config/business';
+import { formatTelHref, isConfigured } from '../utils/config';
+---
+
+<BaseLayout
+  title="Request a quote"
+  description="Request an electrical quote from Ace Electric LLC. Tell us about your project, property, and preferred contact method."
+  path="/contact"
+>
+  <section class="section">
+    <div class="container contact-grid">
+      <div>
+        <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]} />
+        <h1>Request a quote</h1>
+        <p class="lead">
+          Complete the form and we will follow up using your preferred contact method during business
+          hours.
+        </p>
+        <ul class="contact-details">
+          {
+            isConfigured(business.phone) && (
+              <li>
+                Phone: <a href={formatTelHref(business.phone)}>{business.phone}</a>
+              </li>
+            )
+          }
+          {
+            isConfigured(business.email) && (
+              <li>
+                Email: <a href={`mailto:${business.email}`}>{business.email}</a>
+              </li>
+            )
+          }
+          {
+            isConfigured(business.businessHours) && <li>Hours: {business.businessHours}</li>
+          }
+        </ul>
+      </div>
+      <QuoteForm />
+    </div>
+  </section>
+  <QuoteCta heading="Prefer to browse first?" text="Review our services or gallery, then return here when you are ready." />
+</BaseLayout>
+
+<style>
+  .contact-grid {
+    display: grid;
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+
+  @media (min-width: 960px) {
+    .contact-grid {
+      grid-template-columns: 1fr 1.1fr;
+    }
+  }
+
+  .contact-details {
+    padding-left: 1.25rem;
+  }
+</style>

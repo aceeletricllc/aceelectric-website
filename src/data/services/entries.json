@@ -1,0 +1,1163 @@
+[
+  {
+    "slug": "emergency-electrical-services",
+    "title": "Emergency Electrical Services",
+    "shortLabel": "Emergency Electrical Services",
+    "metaDescription": "Professional emergency electrical services for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Emergency Electrical Services",
+    "summary": "When power loss, sparking, or burning odors create an immediate safety concern, you need a calm, skilled response. We isolate hazards, stabilize the system, and explain follow-up repairs or upgrades.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule emergency electrical services?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "electrical-panel-upgrades",
+      "electrical-code-violation-corrections",
+      "circuit-breaker-repair-and-replacement"
+    ]
+  },
+  {
+    "slug": "electrical-panel-upgrades",
+    "title": "Electrical Panel Upgrades",
+    "shortLabel": "Electrical Panel Upgrades",
+    "metaDescription": "Professional electrical panel upgrades for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Electrical Panel Upgrades",
+    "summary": "Modern panels support today’s appliances, EV charging, and workshop loads while improving overcurrent protection. We evaluate your service size, panel condition, and grounding before recommending an upgrade path.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule electrical panel upgrades?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "electrical-code-violation-corrections",
+      "ev-charger-installation",
+      "wiring-and-rewiring"
+    ]
+  },
+  {
+    "slug": "electrical-code-violation-corrections",
+    "title": "Electrical Code Violation Corrections",
+    "shortLabel": "Electrical Code Violation Corrections",
+    "metaDescription": "Professional electrical code violation corrections for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Electrical Code Violation Corrections",
+    "summary": "Inspection findings can feel overwhelming. We review violation notices, map them to NEC-aligned corrections, and document completed work for re-inspection when required.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule electrical code violation corrections?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "ev-charger-installation",
+      "electrical-repairs",
+      "cloth-wiring-replacement"
+    ]
+  },
+  {
+    "slug": "ev-charger-installation",
+    "title": "EV Charger Installation",
+    "shortLabel": "EV Charger Installation",
+    "metaDescription": "Professional ev charger installation for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "EV Charger Installation",
+    "summary": "Level 2 home and business chargers need the right circuit size, location, and disconnecting means. We coordinate load calculations, wiring routes, and manufacturer requirements.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule ev charger installation?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "electrical-repairs",
+      "circuit-breaker-repair-and-replacement",
+      "fuse-box-upgrades"
+    ]
+  },
+  {
+    "slug": "electrical-repairs",
+    "title": "Electrical Repairs",
+    "shortLabel": "Electrical Repairs",
+    "metaDescription": "Professional electrical repairs for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Electrical Repairs",
+    "summary": "From dead outlets to damaged circuits, repairs start with accurate diagnosis so symptoms do not return. We repair or replace components to restore safe, reliable power.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule electrical repairs?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "circuit-breaker-repair-and-replacement",
+      "wiring-and-rewiring",
+      "gfci-outlet-installation"
+    ]
+  },
+  {
+    "slug": "circuit-breaker-repair-and-replacement",
+    "title": "Circuit Breaker Repair and Replacement",
+    "shortLabel": "Circuit Breaker Repair and Replacement",
+    "metaDescription": "Professional circuit breaker repair and replacement for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Circuit Breaker Repair and Replacement",
+    "summary": "Breakers protect wire and equipment. We identify whether nuisance tripping stems from overload, a failing breaker, or a fault on the branch circuit.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule circuit breaker repair and replacement?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "wiring-and-rewiring",
+      "cloth-wiring-replacement",
+      "electrical-inspections"
+    ]
+  },
+  {
+    "slug": "wiring-and-rewiring",
+    "title": "Wiring and Rewiring",
+    "shortLabel": "Wiring and Rewiring",
+    "metaDescription": "Professional wiring and rewiring for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Wiring and Rewiring",
+    "summary": "Partial or whole-home rewiring addresses aging insulation, insufficient capacity, and ungrounded circuits. We plan paths that minimize disruption to finished spaces.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule wiring and rewiring?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "cloth-wiring-replacement",
+      "fuse-box-upgrades",
+      "smoke-and-carbon-monoxide-detector-installation"
+    ]
+  },
+  {
+    "slug": "cloth-wiring-replacement",
+    "title": "Cloth Wiring Replacement",
+    "shortLabel": "Cloth Wiring Replacement",
+    "metaDescription": "Professional cloth wiring replacement for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Cloth Wiring Replacement",
+    "summary": "Vintage cloth-insulated wiring can become brittle and pose fire risk. We replace affected runs and upgrade devices to current safety standards.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule cloth wiring replacement?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "fuse-box-upgrades",
+      "gfci-outlet-installation",
+      "indoor-lighting"
+    ]
+  },
+  {
+    "slug": "fuse-box-upgrades",
+    "title": "Fuse Box Upgrades",
+    "shortLabel": "Fuse Box Upgrades",
+    "metaDescription": "Professional fuse box upgrades for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Fuse Box Upgrades",
+    "summary": "Fuse panels may lack modern protection and space for new circuits. We migrate to breaker panels with appropriate service capacity.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule fuse box upgrades?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "gfci-outlet-installation",
+      "electrical-inspections",
+      "outlets-and-switches"
+    ]
+  },
+  {
+    "slug": "gfci-outlet-installation",
+    "title": "GFCI Outlet Installation",
+    "shortLabel": "GFCI Outlet Installation",
+    "metaDescription": "Professional gfci outlet installation for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "GFCI Outlet Installation",
+    "summary": "GFCI protection reduces shock risk near water and outdoors. We install and test GFCI receptacles and breakers where codes and best practices require them.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule gfci outlet installation?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "electrical-inspections",
+      "smoke-and-carbon-monoxide-detector-installation",
+      "aluminum-wiring-replacement"
+    ]
+  },
+  {
+    "slug": "electrical-inspections",
+    "title": "Electrical Inspections",
+    "shortLabel": "Electrical Inspections",
+    "metaDescription": "Professional electrical inspections for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Electrical Inspections",
+    "summary": "Inspections support real estate transactions, insurance reviews, and peace of mind. We document visible conditions and recommend prioritized corrections.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule electrical inspections?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "smoke-and-carbon-monoxide-detector-installation",
+      "indoor-lighting",
+      "dedicated-circuits"
+    ]
+  },
+  {
+    "slug": "smoke-and-carbon-monoxide-detector-installation",
+    "title": "Smoke and Carbon Monoxide Detector Installation",
+    "shortLabel": "Smoke and Carbon Monoxide Detector Installation",
+    "metaDescription": "Professional smoke and carbon monoxide detector installation for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Smoke and Carbon Monoxide Detector Installation",
+    "summary": "Proper detector placement and interconnection save lives. We install hardwired and battery-backed units to manufacturer and code guidance.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule smoke and carbon monoxide detector installation?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "indoor-lighting",
+      "outlets-and-switches",
+      "ceiling-fan-installation"
+    ]
+  },
+  {
+    "slug": "indoor-lighting",
+    "title": "Indoor Lighting",
+    "shortLabel": "Indoor Lighting",
+    "metaDescription": "Professional indoor lighting for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Indoor Lighting",
+    "summary": "Layered indoor lighting improves comfort and task visibility. We install recessed, track, and fixture lighting with dimming where desired.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule indoor lighting?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "outlets-and-switches",
+      "aluminum-wiring-replacement",
+      "led-lighting-upgrades"
+    ]
+  },
+  {
+    "slug": "outlets-and-switches",
+    "title": "Outlets and Switches",
+    "shortLabel": "Outlets and Switches",
+    "metaDescription": "Professional outlets and switches for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Outlets and Switches",
+    "summary": "We add, relocate, and upgrade outlets and switches—including USB and tamper-resistant devices—for convenience and safety.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule outlets and switches?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "aluminum-wiring-replacement",
+      "dedicated-circuits",
+      "outdoor-lighting"
+    ]
+  },
+  {
+    "slug": "aluminum-wiring-replacement",
+    "title": "Aluminum Wiring Replacement",
+    "shortLabel": "Aluminum Wiring Replacement",
+    "metaDescription": "Professional aluminum wiring replacement for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Aluminum Wiring Replacement",
+    "summary": "Aluminum branch wiring needs correct terminations or replacement. We evaluate COPALUM-style remediation or rewiring based on your home’s condition.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule aluminum wiring replacement?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "dedicated-circuits",
+      "ceiling-fan-installation",
+      "landscape-lighting"
+    ]
+  },
+  {
+    "slug": "dedicated-circuits",
+    "title": "Dedicated Circuits",
+    "shortLabel": "Dedicated Circuits",
+    "metaDescription": "Professional dedicated circuits for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Dedicated Circuits",
+    "summary": "Large appliances and workshops need circuits sized for continuous load. We run dedicated lines from the panel to the point of use.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule dedicated circuits?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "ceiling-fan-installation",
+      "led-lighting-upgrades",
+      "security-lighting"
+    ]
+  },
+  {
+    "slug": "ceiling-fan-installation",
+    "title": "Ceiling Fan Installation",
+    "shortLabel": "Ceiling Fan Installation",
+    "metaDescription": "Professional ceiling fan installation for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Ceiling Fan Installation",
+    "summary": "Fans require rated boxes and balanced mounting. We install fans, remotes, and controls while verifying support and switching.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule ceiling fan installation?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "led-lighting-upgrades",
+      "outdoor-lighting",
+      "commercial-electrical-services"
+    ]
+  },
+  {
+    "slug": "led-lighting-upgrades",
+    "title": "LED Lighting Upgrades",
+    "shortLabel": "LED Lighting Upgrades",
+    "metaDescription": "Professional led lighting upgrades for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "LED Lighting Upgrades",
+    "summary": "LED retrofits cut energy use and heat. We match drivers, dimmers, and color temperature for each space.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule led lighting upgrades?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "outdoor-lighting",
+      "landscape-lighting",
+      "data-and-ethernet-wiring"
+    ]
+  },
+  {
+    "slug": "outdoor-lighting",
+    "title": "Outdoor Lighting",
+    "shortLabel": "Outdoor Lighting",
+    "metaDescription": "Professional outdoor lighting for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Outdoor Lighting",
+    "summary": "Exterior lighting improves safety and curb appeal. We install wet-location fixtures, photocells, and timers.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule outdoor lighting?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "landscape-lighting",
+      "security-lighting",
+      "parking-lot-lighting"
+    ]
+  },
+  {
+    "slug": "landscape-lighting",
+    "title": "Landscape Lighting",
+    "shortLabel": "Landscape Lighting",
+    "metaDescription": "Professional landscape lighting for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Landscape Lighting",
+    "summary": "Low-voltage landscape lighting highlights paths and plantings. We layout transformers, wiring, and fixtures for even illumination.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule landscape lighting?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "security-lighting",
+      "commercial-electrical-services",
+      "smart-home-wiring"
+    ]
+  },
+  {
+    "slug": "security-lighting",
+    "title": "Security Lighting",
+    "shortLabel": "Security Lighting",
+    "metaDescription": "Professional security lighting for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Security Lighting",
+    "summary": "Motion-activated and dusk-to-dawn lighting deters trespass and improves camera visibility. We aim fixtures to reduce glare for neighbors.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule security lighting?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "commercial-electrical-services",
+      "data-and-ethernet-wiring",
+      "fixture-and-chandelier-installation"
+    ]
+  },
+  {
+    "slug": "commercial-electrical-services",
+    "title": "Commercial Electrical Services",
+    "shortLabel": "Commercial Electrical Services",
+    "metaDescription": "Professional commercial electrical services for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Commercial Electrical Services",
+    "summary": "Retail, office, and light industrial spaces need reliable power and maintenance. We handle tenant improvements, lighting retrofits, and power distribution.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule commercial electrical services?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "data-and-ethernet-wiring",
+      "parking-lot-lighting",
+      "electrical-troubleshooting"
+    ]
+  },
+  {
+    "slug": "data-and-ethernet-wiring",
+    "title": "Data and Ethernet Wiring",
+    "shortLabel": "Data and Ethernet Wiring",
+    "metaDescription": "Professional data and ethernet wiring for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Data and Ethernet Wiring",
+    "summary": "Structured cabling supports networks and PoE devices. We run Cat6/Cat6a to patch panels and work areas with clean terminations.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule data and ethernet wiring?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "parking-lot-lighting",
+      "smart-home-wiring",
+      "emergency-electrical-services"
+    ]
+  },
+  {
+    "slug": "parking-lot-lighting",
+    "title": "Parking Lot Lighting",
+    "shortLabel": "Parking Lot Lighting",
+    "metaDescription": "Professional parking lot lighting for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Parking Lot Lighting",
+    "summary": "Lot and pole lighting improves safety after dark. We service fixtures, ballasts/LED drivers, and photocontrols for consistent coverage.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule parking lot lighting?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "smart-home-wiring",
+      "fixture-and-chandelier-installation",
+      "electrical-panel-upgrades"
+    ]
+  },
+  {
+    "slug": "smart-home-wiring",
+    "title": "Smart Home Wiring",
+    "shortLabel": "Smart Home Wiring",
+    "metaDescription": "Professional smart home wiring for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Smart Home Wiring",
+    "summary": "Smart switches, panels, and hubs need neutral wires and proper loads. We prepare circuits and enclosures for your chosen ecosystem.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule smart home wiring?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "fixture-and-chandelier-installation",
+      "electrical-troubleshooting",
+      "electrical-code-violation-corrections"
+    ]
+  },
+  {
+    "slug": "fixture-and-chandelier-installation",
+    "title": "Fixture and Chandelier Installation",
+    "shortLabel": "Fixture and Chandelier Installation",
+    "metaDescription": "Professional fixture and chandelier installation for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Fixture and Chandelier Installation",
+    "summary": "Heavy fixtures demand secure mounting and correct supply wiring. We install chandeliers, pendants, and specialty fixtures safely.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule fixture and chandelier installation?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "electrical-troubleshooting",
+      "emergency-electrical-services",
+      "ev-charger-installation"
+    ]
+  },
+  {
+    "slug": "electrical-troubleshooting",
+    "title": "Electrical Troubleshooting",
+    "shortLabel": "Electrical Troubleshooting",
+    "metaDescription": "Professional electrical troubleshooting for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.",
+    "h1": "Electrical Troubleshooting",
+    "summary": "Intermittent faults need methodical testing—not guesswork. We trace circuits, measure loads, and isolate defects efficiently.",
+    "warningSigns": [
+      "You notice recurring issues such as tripping breakers, warm devices, or flickering lights.",
+      "Outlets or switches feel loose, spark, or only work intermittently.",
+      "You are planning a remodel, new appliance, or equipment that increases electrical load.",
+      "An inspection or insurance review flagged concerns you want corrected promptly."
+    ],
+    "process": [
+      "Contact us with a brief description of the issue or project goals.",
+      "We schedule a site visit or assessment to inspect relevant circuits and equipment.",
+      "You receive a clear scope of work and quote before work begins.",
+      "Licensed electricians complete the work, test circuits, and walk you through the results."
+    ],
+    "faqs": [
+      {
+        "question": "When should I schedule electrical troubleshooting?",
+        "answer": "Schedule as soon as symptoms affect safety, daily use, or a deadline such as a sale or tenant move-in. Early assessment often reduces cost and downtime."
+      },
+      {
+        "question": "Will you pull permits if they are required?",
+        "answer": "When permits apply to your project, we coordinate permitting and inspections as part of the scope we agree on with you."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Timing depends on access, materials, and complexity. After the assessment we provide a realistic schedule for your specific job."
+      },
+      {
+        "question": "Can you coordinate with other trades?",
+        "answer": "Yes. We often work alongside HVAC, low-voltage, and general contractors so rough-in and finish stages stay aligned."
+      }
+    ],
+    "relatedSlugs": [
+      "emergency-electrical-services",
+      "electrical-panel-upgrades",
+      "electrical-repairs"
+    ]
+  }
+]

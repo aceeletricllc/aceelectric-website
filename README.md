@@ -1,43 +1,96 @@
-# Astro Starter Kit: Minimal
+# Ace Electric LLC website
 
-```sh
-npm create astro@latest -- --template minimal
+Static marketing site for [Ace Electric LLC](https://aceelectric.llc), built with [Astro](https://astro.build) for fast, crawlable HTML and deployment on Cloudflare Pages.
+
+## Requirements
+
+- Node.js 22+ (see `package.json` engines)
+
+## Install
+
+```bash
+npm install
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Local development
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+npm run dev
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Open the URL shown in the terminal (typically `http://localhost:4321`).
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Production build
 
-Any static assets, like images, can be placed in the `public/` directory.
+```bash
+npm run build
+```
 
-## 🧞 Commands
+Output is written to `dist/`.
 
-All commands are run from the root of the project, from a terminal:
+Preview the production build locally:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+```bash
+npm run preview
+```
 
-## 👀 Want to learn more?
+## Edit business information
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Update [`src/config/business.ts`](src/config/business.ts). Fields that still contain `TODO:` are placeholders and are not treated as public claims in the UI or structured data.
+
+Also review [`src/config/site.ts`](src/config/site.ts) for navigation and default SEO text.
+
+## Services content
+
+Service pages are generated from [`src/data/services/entries.json`](src/data/services/entries.json). Regenerate baseline entries with:
+
+```bash
+node scripts/generate-services.mjs
+```
+
+Adjust copy in `scripts/generate-services.mjs` or edit `entries.json` directly, then rebuild.
+
+## Gallery images
+
+1. Add photos under [`public/images/gallery/`](public/images/gallery/) (see [`public/images/gallery/README.md`](public/images/gallery/README.md)).
+2. Update [`src/data/gallery.ts`](src/data/gallery.ts) with paths, dimensions, alt text, captions, and categories.
+3. Run `npm run build`.
+
+## Formspree quote form
+
+1. Create a form at [Formspree](https://formspree.io).
+2. Set `formspreeEndpoint` in [`src/config/business.ts`](src/config/business.ts) to `https://formspree.io/f/YOUR_FORM_ID`.
+3. Confirm `formspreeThankYouUrl` points to `https://aceelectric.llc/thank-you` (or your preview URL while testing).
+
+## GitHub repository (manual, later)
+
+1. Sign in to GitHub as `aceelectricllc`.
+2. Create a new repository named `aceelectric-website`.
+3. From this project folder:
+
+```bash
+git remote add origin git@github.com:aceelectricllc/aceelectric-website.git
+git push -u origin main
+```
+
+## Cloudflare Pages (manual, later)
+
+1. In Cloudflare Dashboard, open **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
+2. Select `aceelectricllc/aceelectric-website`.
+3. Build settings:
+   - **Build command:** `npm run build`
+   - **Build output directory:** `dist`
+4. Deploy, then add custom domain **aceelectric.llc** under the project’s **Custom domains** settings and follow DNS instructions.
+
+## Project structure
+
+- `src/pages/` — routes (home, services, gallery, contact, policies)
+- `src/components/` — header, footer, forms, shared UI
+- `src/layouts/` — base and service layouts
+- `src/config/` — business and site configuration
+- `src/data/` — services and gallery data
+- `public/` — static assets (favicons, images, manifest)
+
+## License
+
+Proprietary — Ace Electric LLC.

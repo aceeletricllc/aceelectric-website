@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page not found"
+  description="The page you requested could not be found on Ace Electric LLC."
+  path="/404"
+  noindex={true}
+>
+  <section class="section">
+    <div class="container container--narrow">
+      <h1>Page not found</h1>
+      <p class="lead">
+        The link may be outdated or mistyped. Try one of the pages below or request a quote for your
+        project.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/">Go home</a>
+        <a class="btn btn--outline" href="/services">View services</a>
+        <a class="btn btn--outline" href="/contact">Request a quote</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

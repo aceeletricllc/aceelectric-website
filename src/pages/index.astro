@@ -1,16 +1,148 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import QuoteCta from '../components/QuoteCta.astro';
+import { business } from '../config/business';
+import { site } from '../config/site';
+import { getAllServices } from '../data/services';
+import { isConfigured } from '../utils/config';
+
+const featuredSlugs = [
+  'electrical-panel-upgrades',
+  'ev-charger-installation',
+  'electrical-repairs',
+  'indoor-lighting',
+];
+
+const services = getAllServices();
+const featured = featuredSlugs
+  .map((slug) => services.find((s) => s.slug === slug))
+  .filter((s): s is NonNullable<typeof s> => Boolean(s));
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="Licensed electrical services"
+  description={site.defaultDescription}
+  path="/"
+  includeLocalBusiness={true}
+>
+  <section class="hero">
+    <div class="container hero__inner">
+      <p class="hero__eyebrow">Residential & commercial electricians</p>
+      <h1>Power you can trust, work explained clearly</h1>
+      <p class="hero__lead">
+        {business.displayName} delivers panel upgrades, repairs, lighting, EV charging, and code-conscious
+        corrections with tidy workmanship and upfront communication.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/contact">Request a Quote</a>
+        <a class="btn btn--secondary" href="/services">View services</a>
+      </div>
+      {
+        isConfigured(business.emergencyServiceAvailability) && (
+          <p class="hero__note">{business.emergencyServiceAvailability}</p>
+        )
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Electrical services built for real buildings</h2>
+      <p class="lead">
+        From troubleshooting a stubborn circuit to planning a panel upgrade, we match the scope to your
+        property and timeline.
+      </p>
+      <div class="card-grid">
+        {
+          featured.map((service) => (
+            <article class="card">
+              <h3>
+                <a href={`/services/${service.slug}`}>{service.title}</a>
+              </h3>
+              <p>{service.summary.slice(0, 160)}…</p>
+              <p>
+                <a href={`/services/${service.slug}`}>Learn more</a>
+              </p>
+            </article>
+          ))
+        }
+      </div>
+      <p class="home-more">
+        <a class="btn btn--outline" href="/services">See all services</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container home-trust">
+      <h2>What to expect when you hire us</h2>
+      <ul class="home-trust__list">
+        <li>Licensed professionals who respect your home or workplace</li>
+        <li>Written quotes before we start billed work</li>
+        <li>Neat cable routing and labeled panels where applicable</li>
+        <li>Testing and walk-through when the job is complete</li>
+      </ul>
+      {
+        isConfigured(business.insuranceStatus) && (
+          <p class="home-trust__meta">{business.insuranceStatus}</p>
+        )
+      }
+    </div>
+  </section>
+
+  <QuoteCta />
+</BaseLayout>
+
+<style>
+  .hero {
+    background:
+      radial-gradient(circle at 85% 15%, rgb(178 34 34 / 28%), transparent 45%),
+      radial-gradient(circle at 10% 90%, rgb(230 184 0 / 15%), transparent 40%),
+      linear-gradient(165deg, var(--color-black), var(--color-navy-900));
+    color: var(--color-white);
+    padding-block: var(--space-3xl);
+  }
+
+  .hero__inner {
+    max-width: 40rem;
+  }
+
+  .hero__eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8125rem;
+    color: var(--color-accent);
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+  }
+
+  .hero__lead {
+    font-size: 1.125rem;
+    color: var(--color-muted);
+  }
+
+  .hero__note {
+    margin-top: var(--space-lg);
+    font-size: 0.9375rem;
+    color: var(--color-accent);
+  }
+
+  .home-more {
+    margin-top: var(--space-xl);
+  }
+
+  .home-trust__list {
+    max-width: 40rem;
+    padding-left: 1.25rem;
+  }
+
+  .home-trust__list li {
+    margin-bottom: var(--space-sm);
+  }
+
+  .home-trust__meta {
+    margin-top: var(--space-lg);
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+</style>

@@ -1,0 +1,157 @@
+---
+import { business } from '../config/business';
+import { footerServiceLinks, mainNav, site } from '../config/site';
+import { formatTelHref, isConfigured } from '../utils/config';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <p class="site-footer__brand">{business.displayName}</p>
+      <p class="site-footer__tagline">
+        Professional electrical services for residential and commercial properties. Request a quote
+        to discuss your project.
+      </p>
+    </div>
+
+    <div>
+      <h2 class="site-footer__heading">Quick links</h2>
+      <ul class="site-footer__links">
+        {
+          mainNav.map((item) => (
+            <li>
+              <a href={item.href}>{item.label}</a>
+            </li>
+          ))
+        }
+        <li>
+          <a href="/privacy">Privacy policy</a>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="site-footer__heading">Popular services</h2>
+      <ul class="site-footer__links">
+        {
+          footerServiceLinks.map((item) => (
+            <li>
+              <a href={item.href}>{item.label}</a>
+            </li>
+          ))
+        }
+        <li>
+          <a href="/services">View all services</a>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="site-footer__heading">Contact</h2>
+      <ul class="site-footer__links site-footer__contact">
+        {
+          isConfigured(business.phone) && (
+            <li>
+              <a href={formatTelHref(business.phone)}>{business.phone}</a>
+            </li>
+          )
+        }
+        {
+          isConfigured(business.email) && (
+            <li>
+              <a href={`mailto:${business.email}`}>{business.email}</a>
+            </li>
+          )
+        }
+        {
+          !isConfigured(business.phone) && !isConfigured(business.email) && (
+            <li>
+              <a href="/contact">Request a quote online</a>
+            </li>
+          )
+        }
+        {
+          isConfigured(business.businessHours) && <li>{business.businessHours}</li>
+        }
+      </ul>
+    </div>
+  </div>
+
+  <div class="container site-footer__legal">
+    <p>
+      © {year} {business.legalName}. All rights reserved.
+    </p>
+    {
+      isConfigured(business.licenseNumber) && (
+        <p>License: {business.licenseNumber}</p>
+      )
+    }
+    {
+      isConfigured(business.insuranceStatus) && <p>{business.insuranceStatus}</p>
+    }
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--color-black);
+    color: var(--color-muted);
+    padding-block: var(--space-2xl);
+    margin-top: var(--space-2xl);
+  }
+
+  .site-footer a {
+    color: var(--color-white);
+    text-decoration: none;
+  }
+
+  .site-footer a:hover {
+    color: var(--color-accent);
+  }
+
+  .site-footer__grid {
+    display: grid;
+    gap: var(--space-xl);
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  }
+
+  .site-footer__brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: var(--space-sm);
+  }
+
+  .site-footer__tagline {
+    margin: 0;
+    max-width: 22rem;
+  }
+
+  .site-footer__heading {
+    font-size: 1rem;
+    color: var(--color-white);
+    margin-bottom: var(--space-md);
+  }
+
+  .site-footer__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .site-footer__links li {
+    margin-bottom: var(--space-sm);
+  }
+
+  .site-footer__legal {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid rgb(255 255 255 / 12%);
+    font-size: 0.9375rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+</style>

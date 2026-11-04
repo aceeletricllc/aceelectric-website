@@ -1,0 +1,71 @@
+---
+import { business } from '../config/business';
+import { formatTelHref, isConfigured } from '../utils/config';
+
+const phoneReady = isConfigured(business.phone);
+---
+
+<div class="mobile-action-bar" aria-label="Quick actions">
+  {
+    phoneReady && (
+      <a class="mobile-action-bar__btn mobile-action-bar__btn--call" href={formatTelHref(business.phone)}>
+        Call
+      </a>
+    )
+  }
+  <a class="mobile-action-bar__btn mobile-action-bar__btn--quote" href="/contact">
+    Request a Quote
+  </a>
+</div>
+
+<style>
+  .mobile-action-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 60;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: var(--color-black);
+    border-top: 3px solid var(--color-accent);
+    padding: env(safe-area-inset-bottom, 0);
+  }
+
+  .mobile-action-bar__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--mobile-bar-height);
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-white);
+  }
+
+  .mobile-action-bar__btn--call {
+    background: var(--color-navy-800);
+    color: var(--color-white);
+  }
+
+  .mobile-action-bar__btn--quote {
+    background: var(--color-primary);
+    color: var(--color-white);
+  }
+
+  .mobile-action-bar__btn:focus-visible {
+    outline-offset: -3px;
+  }
+
+  @media (min-width: 768px) {
+    .mobile-action-bar {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .mobile-action-bar:has(.mobile-action-bar__btn--call:only-child) {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

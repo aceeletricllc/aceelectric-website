@@ -1,0 +1,44 @@
+---
+import { site } from '../config/site';
+import { buildCanonical, pageTitle } from '../utils/seo';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  ogImage?: string;
+  noindex?: boolean;
+}
+
+const { title, description, path, ogImage = site.defaultOgImage, noindex = false } = Astro.props;
+const fullTitle = pageTitle(title);
+const canonical = buildCanonical(path);
+const ogUrl = ogImage.startsWith('http') ? ogImage : new URL(ogImage, site.url).href;
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+<link rel="sitemap" href="/sitemap-index.xml" />
+
+<link rel="icon" href="/images/brand/ace-electric-logo.png" type="image/png" />
+<link rel="apple-touch-icon" href="/images/brand/ace-electric-logo.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={site.name} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={ogUrl} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogUrl} />
+{site.twitterHandle && <meta name="twitter:site" content={site.twitterHandle} />}
+
+<meta name="theme-color" content="#000000" />

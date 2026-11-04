@@ -1,0 +1,128 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteCta from '../components/QuoteCta.astro';
+import {
+  breadcrumbJsonLd,
+  faqPageJsonLd,
+  serviceJsonLd,
+} from '../utils/schema';
+import type { ServiceRecord } from '../data/services';
+import { getRelatedServices } from '../data/services';
+
+interface Props {
+  service: ServiceRecord;
+}
+
+const { service } = Astro.props;
+const related = getRelatedServices(service);
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services' },
+  { label: service.title },
+];
+
+const breadcrumbItems = [
+  { name: 'Home', path: '/' },
+  { name: 'Services', path: '/services' },
+  { name: service.title, path: `/services/${service.slug}` },
+];
+
+const pageJsonLd = [
+  breadcrumbJsonLd(breadcrumbItems),
+  serviceJsonLd(service),
+  faqPageJsonLd(service.faqs),
+];
+---
+
+<BaseLayout
+  title={service.title}
+  description={service.metaDescription}
+  path={`/services/${service.slug}`}
+  jsonLd={pageJsonLd}
+>
+  <article class="section">
+    <div class="container prose">
+      <Breadcrumbs items={crumbs} />
+      <h1>{service.h1}</h1>
+      <p class="lead">{service.summary}</p>
+
+      <section aria-labelledby="warning-signs">
+        <h2 id="warning-signs">Signs you may need this service</h2>
+        <ul class="list-check">
+          {service.warningSigns.map((item) => <li>{item}</li>)}
+        </ul>
+      </section>
+
+      <section aria-labelledby="our-process">
+        <h2 id="our-process">How we work</h2>
+        <ol>
+          {service.process.map((step) => <li>{step}</li>)}
+        </ol>
+      </section>
+
+      <section aria-labelledby="service-faq">
+        <h2 id="service-faq">Frequently asked questions</h2>
+        <div class="faq-list">
+          {
+            service.faqs.map((faq) => (
+              <details class="faq-item">
+                <summary>{faq.question}</summary>
+                <p>{faq.answer}</p>
+              </details>
+            ))
+          }
+        </div>
+      </section>
+
+      {
+        related.length > 0 && (
+          <section aria-labelledby="related-services">
+            <h2 id="related-services">Related services</h2>
+            <ul class="related-list">
+              {related.map((item) => (
+                <li>
+                  <a href={`/services/${item.slug}`}>{item.title}</a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+    </div>
+  </article>
+  <QuoteCta
+    heading={`Request a quote for ${service.title.toLowerCase()}`}
+    text="Share photos, addresses, or inspection notes if you have them. We will follow up with next steps."
+  />
+</BaseLayout>
+
+<style>
+  .faq-list {
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  .faq-item {
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    padding: var(--space-md) var(--space-lg);
+    border: 1px solid rgb(36 48 68 / 10%);
+  }
+
+  .faq-item summary {
+    cursor: pointer;
+    font-weight: 600;
+    min-height: 2.75rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .related-list {
+    padding-left: 1.25rem;
+  }
+
+  .related-list li {
+    margin-bottom: var(--space-sm);
+  }
+</style>

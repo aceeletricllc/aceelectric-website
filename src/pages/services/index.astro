@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import QuoteCta from '../../components/QuoteCta.astro';
+import { getAllServices } from '../../data/services';
+
+const services = getAllServices();
+---
+
+<BaseLayout
+  title="Electrical services"
+  description="Explore residential and commercial electrical services from Ace Electric LLC—repairs, upgrades, lighting, EV charging, inspections, and more."
+  path="/services"
+>
+  <section class="section">
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services' }]} />
+      <h1>Electrical services</h1>
+      <p class="lead">
+        Select a service to learn common warning signs, our process, and related work we perform.
+      </p>
+      <div class="card-grid">
+        {
+          services.map((service) => (
+            <article class="card">
+              <h2 class="card__title">
+                <a href={`/services/${service.slug}`}>{service.title}</a>
+              </h2>
+              <p>{service.metaDescription}</p>
+              <a href={`/services/${service.slug}`}>View service details</a>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <QuoteCta />
+</BaseLayout>
+
+<style>
+  .card__title {
+    font-size: 1.125rem;
+  }
+</style>

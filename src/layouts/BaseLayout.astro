@@ -1,0 +1,54 @@
+---
+import '../styles/global.css';
+import SEOHead from '../components/SEOHead.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import MobileActionBar from '../components/MobileActionBar.astro';
+import { graphJsonLd, localBusinessJsonLd, organizationJsonLd, webSiteJsonLd } from '../utils/schema';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  ogImage?: string;
+  noindex?: boolean;
+  /** Additional JSON-LD nodes serialized into the page */
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[] | null;
+  includeLocalBusiness?: boolean;
+}
+
+const {
+  title,
+  description,
+  path,
+  ogImage,
+  noindex,
+  jsonLd = null,
+  includeLocalBusiness = false,
+} = Astro.props;
+
+const localBusiness = includeLocalBusiness ? localBusinessJsonLd() : null;
+const extraNodes = jsonLd
+  ? Array.isArray(jsonLd)
+    ? jsonLd
+    : [jsonLd]
+  : [];
+const jsonLdPayload = graphJsonLd(webSiteJsonLd(), organizationJsonLd(), localBusiness, ...extraNodes);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SEOHead title={title} description={description} path={path} ogImage={ogImage} noindex={noindex} />
+    <script type="application/ld+json" set:html={jsonLdPayload} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <SiteHeader />
+    <main id="main-content" class="site-main">
+      <slot />
+    </main>
+    <SiteFooter />
+    <MobileActionBar />
+  </body>
+</html>

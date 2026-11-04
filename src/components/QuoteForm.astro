@@ -1,0 +1,172 @@
+---
+import { business } from '../config/business';
+import { getAllServices } from '../data/services';
+
+const services = getAllServices();
+---
+
+<form
+  class="quote-form"
+  action={business.formspreeEndpoint}
+  method="POST"
+  novalidate
+  data-quote-form
+>
+  <input type="hidden" name="_subject" value="New quote request — Ace Electric LLC" />
+  <input type="hidden" name="_next" value={business.formspreeThankYouUrl} />
+
+  <div class="honeypot" aria-hidden="true">
+    <label for="company">Company</label>
+    <input id="company" type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+  </div>
+
+  <div class="form-status form-status--error" role="alert" aria-live="polite" hidden data-form-error>
+    Please correct the highlighted fields and try again.
+  </div>
+
+  <div class="form-field" data-field="name">
+    <label for="name">Full name <span aria-hidden="true">*</span></label>
+    <input id="name" name="name" type="text" autocomplete="name" required minlength="2" />
+    <p class="form-error" hidden data-error-for="name">Enter your name.</p>
+  </div>
+
+  <div class="form-field" data-field="phone">
+    <label for="phone">Phone <span aria-hidden="true">*</span></label>
+    <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+    <p class="form-error" hidden data-error-for="phone">Enter a phone number we can reach you at.</p>
+  </div>
+
+  <div class="form-field" data-field="email">
+    <label for="email">Email <span aria-hidden="true">*</span></label>
+    <input id="email" name="email" type="email" autocomplete="email" required />
+    <p class="form-error" hidden data-error-for="email">Enter a valid email address.</p>
+  </div>
+
+  <div class="form-field" data-field="service">
+    <label for="service">Service needed <span aria-hidden="true">*</span></label>
+    <select id="service" name="service" required>
+      <option value="">Select a service</option>
+      {
+        services.map((s) => (
+          <option value={s.title}>{s.title}</option>
+        ))
+      }
+      <option value="Other">Other</option>
+    </select>
+    <p class="form-error" hidden data-error-for="service">Select the service you need.</p>
+  </div>
+
+  <div class="form-field" data-field="propertyType">
+    <label for="propertyType">Property type <span aria-hidden="true">*</span></label>
+    <select id="propertyType" name="property_type" required>
+      <option value="">Select property type</option>
+      <option value="Single-family home">Single-family home</option>
+      <option value="Multi-family / condo">Multi-family / condo</option>
+      <option value="Commercial">Commercial</option>
+      <option value="Industrial">Industrial</option>
+      <option value="Other">Other</option>
+    </select>
+    <p class="form-error" hidden data-error-for="propertyType">Select a property type.</p>
+  </div>
+
+  <div class="form-field" data-field="location">
+    <label for="location">Project address or ZIP code <span aria-hidden="true">*</span></label>
+    <input id="location" name="location" type="text" autocomplete="postal-code" required />
+    <p class="form-error" hidden data-error-for="location">Enter an address or ZIP code.</p>
+  </div>
+
+  <div class="form-field" data-field="contactMethod">
+    <label for="contactMethod">Preferred contact method <span aria-hidden="true">*</span></label>
+    <select id="contactMethod" name="preferred_contact" required>
+      <option value="">Select contact method</option>
+      <option value="Phone call">Phone call</option>
+      <option value="Text message">Text message</option>
+      <option value="Email">Email</option>
+    </select>
+    <p class="form-error" hidden data-error-for="contactMethod">Choose how we should reach you.</p>
+  </div>
+
+  <div class="form-field" data-field="description">
+    <label for="description">Project description <span aria-hidden="true">*</span></label>
+    <textarea
+      id="description"
+      name="description"
+      required
+      minlength="10"
+      placeholder="Describe symptoms, equipment, timelines, or access notes."></textarea>
+    <p class="form-error" hidden data-error-for="description">
+      Add a brief description (at least 10 characters).
+    </p>
+  </div>
+
+  <div class="form-field" data-field="urgency">
+    <label for="urgency">Urgency (optional)</label>
+    <select id="urgency" name="urgency">
+      <option value="">No rush — flexible scheduling</option>
+      <option value="Within 1–2 weeks">Within 1–2 weeks</option>
+      <option value="Within a few days">Within a few days</option>
+      <option value="Same-day if available">Same-day if available</option>
+    </select>
+  </div>
+
+  <div class="form-field" data-field="consent">
+    <div class="checkbox-row">
+      <input id="consent" name="consent" type="checkbox" value="yes" required />
+      <label for="consent">
+        I agree to be contacted about this request and have read the
+        <a href="/privacy">privacy policy</a>. <span aria-hidden="true">*</span>
+      </label>
+    </div>
+    <p class="form-error" hidden data-error-for="consent">Consent is required to submit this form.</p>
+  </div>
+
+  <button class="btn btn--primary" type="submit">Submit quote request</button>
+</form>
+
+<script>
+  const form = document.querySelector('[data-quote-form]');
+  if (form instanceof HTMLFormElement) {
+    form.addEventListener('submit', (event) => {
+      const fields = form.querySelectorAll('[data-field]');
+      let valid = true;
+
+      fields.forEach((wrapper) => {
+        const input = wrapper.querySelector('input, select, textarea');
+        const error = wrapper.querySelector('[data-error-for]');
+        if (!(input instanceof HTMLInputElement || input instanceof HTMLSelectElement || input instanceof HTMLTextAreaElement)) {
+          return;
+        }
+
+        const fieldValid = input.checkValidity();
+        wrapper.classList.toggle('form-field--error', !fieldValid);
+        if (error instanceof HTMLElement) {
+          error.hidden = fieldValid;
+        }
+        if (!fieldValid) valid = false;
+      });
+
+      const banner = form.querySelector('[data-form-error]');
+      if (banner instanceof HTMLElement) {
+        banner.hidden = valid;
+      }
+
+      if (!valid) {
+        event.preventDefault();
+        const firstInvalid = form.querySelector('.form-field--error input, .form-field--error select, .form-field--error textarea');
+        if (firstInvalid instanceof HTMLElement) {
+          firstInvalid.focus();
+        }
+      }
+    });
+  }
+</script>
+
+<style>
+  .quote-form {
+    background: var(--color-white);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgb(36 48 68 / 8%);
+  }
+</style>

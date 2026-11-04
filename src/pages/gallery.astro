@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteCta from '../components/QuoteCta.astro';
+import { galleryCategories, galleryItems } from '../data/gallery';
+import { business } from '../config/business';
+import { galleryImageObjects } from '../utils/schema';
+---
+
+<BaseLayout
+  title="Project gallery"
+  description="Browse Ace Electric LLC project photography—panel upgrades, lighting, EV charging, and commercial electrical work."
+  path="/gallery"
+  jsonLd={galleryImageObjects(galleryItems)}
+>
+  <section class="section">
+    <div class="container" data-gallery>
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Gallery' }]} />
+      <h1>Project gallery</h1>
+      <p class="lead">
+        Recent residential and commercial work from {business.displayName}. Select a photo to view a
+        larger version.
+      </p>
+
+      <div class="gallery-filters" role="group" aria-label="Filter gallery by category">
+        {
+          galleryCategories.map((cat, index) => (
+            <button
+              type="button"
+              class="gallery-filter"
+              data-gallery-filter={cat.id}
+              aria-pressed={index === 0 ? 'true' : 'false'}
+            >
+              {cat.label}
+            </button>
+          ))
+        }
+      </div>
+
+      <ul class="gallery-grid">
+        {
+          galleryItems.map((item, index) => (
+            <li
+              class="gallery-item"
+              data-gallery-item
+              data-category={item.category}
+              hidden={false}
+            >
+              <button
+                type="button"
+                class="gallery-item__trigger"
+                data-gallery-open
+                data-full-src={item.src}
+                data-alt={item.alt}
+                data-caption={item.caption}
+              >
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  width={item.width}
+                  height={item.height}
+                  loading={index > 2 ? 'lazy' : 'eager'}
+                />
+                <span class="gallery-item__caption">{item.title}</span>
+              </button>
+            </li>
+          ))
+        }
+      </ul>
+
+      <dialog class="gallery-dialog" data-gallery-dialog aria-labelledby="gallery-dialog-caption">
+        <button type="button" class="gallery-dialog__close" data-gallery-close>
+          Close image
+        </button>
+        <figure>
+          <img data-gallery-dialog-img alt="Expanded gallery project photo" width="800" height="600" />
+          <figcaption id="gallery-dialog-caption" data-gallery-dialog-caption></figcaption>
+        </figure>
+      </dialog>
+    </div>
+  </section>
+  <QuoteCta />
+</BaseLayout>
+
+<script src="../scripts/gallery.ts"></script>
+
+<style>
+  .gallery-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin: var(--space-xl) 0;
+  }
+
+  .gallery-filter {
+    min-height: 2.75rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--color-black);
+    background: var(--color-white);
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .gallery-filter[aria-pressed='true'] {
+    background: var(--color-black);
+    color: var(--color-white);
+  }
+
+  .gallery-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--space-lg);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+  }
+
+  .gallery-item__trigger {
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .gallery-item__caption {
+    display: block;
+    padding: var(--space-md);
+    font-weight: 600;
+  }
+
+  .gallery-dialog {
+    border: none;
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    max-width: min(90vw, 52rem);
+  }
+
+  .gallery-dialog::backdrop {
+    background: rgb(11 18 32 / 72%);
+  }
+
+  .gallery-dialog__close {
+    margin-bottom: var(--space-md);
+    min-height: 2.75rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--color-black);
+    background: var(--color-white);
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .gallery-dialog figcaption {
+    margin-top: var(--space-md);
+    color: var(--color-charcoal);
+  }
+</style>

@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { business } from '../config/business';
+import { isConfigured } from '../utils/config';
+---
+
+<BaseLayout
+  title="Privacy policy"
+  description="Privacy policy for Ace Electric LLC—how we handle quote form submissions and contact information."
+  path="/privacy"
+>
+  <section class="section">
+    <div class="container container--narrow prose">
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Privacy policy' }]} />
+      <h1>Privacy policy</h1>
+      <p>Last updated: November 4, 2026</p>
+
+      <section aria-labelledby="info-we-collect">
+        <h2 id="info-we-collect">Information we collect</h2>
+        <p>
+          When you submit the quote form, we collect the details you provide such as your name, phone
+          number, email address, property information, and project description.
+        </p>
+      </section>
+
+      <section aria-labelledby="how-we-use">
+        <h2 id="how-we-use">How we use information</h2>
+        <p>
+          We use your submission to respond to your request, prepare estimates, and schedule work. We do
+          not sell your personal information.
+        </p>
+      </section>
+
+      <section aria-labelledby="form-processing">
+        <h2 id="form-processing">Form processing</h2>
+        <p>
+          Form submissions are delivered through Formspree, a third-party form backend. Their handling of
+          data is governed by their privacy policy. Only provide information you are comfortable sharing
+          for project planning.
+        </p>
+      </section>
+
+      <section aria-labelledby="contact-privacy">
+        <h2 id="contact-privacy">Questions</h2>
+        <p>
+          For privacy questions, contact us
+          {
+            isConfigured(business.email) ? (
+              <>
+                {' '}
+                at <a href={`mailto:${business.email}`}>{business.email}</a>
+              </>
+            ) : (
+              ' using the details published on our contact page once available.'
+            )
+          }
+          .
+        </p>
+      </section>
+    </div>
+  </section>
+</BaseLayout>
