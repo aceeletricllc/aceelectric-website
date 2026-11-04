@@ -1,191 +1,194 @@
 {
   "emergency-electrical-services": {
     "file": "emergency-electrical-services.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 556,
+    "height": 417,
     "kind": "photo",
-    "pexelsId": 5691502
+    "source": "client-provided"
   },
   "electrical-panel-upgrades": {
-    "file": "electrical-panel-upgrades.jpg",
-    "width": 640,
-    "height": 480,
+    "file": "electrical-panel-upgrades.png",
+    "width": 508,
+    "height": 604,
     "kind": "photo",
-    "pexelsId": 257736
+    "source": "client-provided"
   },
   "electrical-code-violation-corrections": {
     "file": "electrical-code-violation-corrections.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 800,
+    "height": 600,
     "kind": "photo",
-    "pexelsId": 4108710
+    "source": "approved-stock",
+    "pexelsId": 257736
   },
   "ev-charger-installation": {
     "file": "ev-charger-installation.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 1024,
+    "height": 576,
     "kind": "photo",
-    "pexelsId": 33751729
+    "source": "client-provided"
   },
   "electrical-repairs": {
     "file": "electrical-repairs.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 800,
+    "height": 600,
     "kind": "photo",
+    "source": "approved-stock",
     "pexelsId": 14319099
   },
   "circuit-breaker-repair-and-replacement": {
     "file": "circuit-breaker-repair-and-replacement.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 768,
+    "height": 576,
     "kind": "photo",
-    "pexelsId": 34054464
+    "source": "client-provided"
   },
   "wiring-and-rewiring": {
     "file": "wiring-and-rewiring.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 603,
+    "height": 452,
     "kind": "photo",
-    "pexelsId": 38171148
+    "source": "client-provided"
   },
   "cloth-wiring-replacement": {
     "file": "cloth-wiring-replacement.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 379,
+    "height": 284,
     "kind": "photo",
-    "pexelsId": 4391482
+    "source": "client-provided"
   },
   "fuse-box-upgrades": {
     "file": "fuse-box-upgrades.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 447,
+    "height": 335,
     "kind": "photo",
-    "pexelsId": 1024313
+    "source": "client-provided"
   },
   "gfci-outlet-installation": {
     "file": "gfci-outlet-installation.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 554,
+    "height": 416,
     "kind": "photo",
-    "pexelsId": 6968382
+    "source": "client-provided"
   },
   "electrical-inspections": {
     "file": "electrical-inspections.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 554,
+    "height": 416,
     "kind": "photo",
-    "pexelsId": 1181243
+    "source": "client-provided"
   },
   "smoke-and-carbon-monoxide-detector-installation": {
     "file": "smoke-and-carbon-monoxide-detector-installation.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 909,
+    "height": 682,
     "kind": "photo",
-    "pexelsId": 10967135
+    "source": "client-provided"
   },
   "indoor-lighting": {
     "file": "indoor-lighting.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 236,
+    "height": 177,
     "kind": "photo",
-    "pexelsId": 305821
+    "source": "client-provided"
   },
   "outlets-and-switches": {
     "file": "outlets-and-switches.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 500,
+    "height": 375,
     "kind": "photo",
-    "pexelsId": 6466147
+    "source": "client-provided"
   },
   "aluminum-wiring-replacement": {
     "file": "aluminum-wiring-replacement.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 334,
+    "height": 250,
     "kind": "photo",
-    "pexelsId": 534216
+    "source": "client-provided"
   },
   "dedicated-circuits": {
     "file": "dedicated-circuits.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 420,
+    "height": 315,
     "kind": "photo",
-    "pexelsId": 280221
+    "source": "client-provided"
   },
   "ceiling-fan-installation": {
     "file": "ceiling-fan-installation.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 576,
+    "height": 432,
     "kind": "photo",
-    "pexelsId": 8488187
+    "source": "client-provided"
   },
   "led-lighting-upgrades": {
     "file": "led-lighting-upgrades.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 768,
+    "height": 576,
     "kind": "photo",
-    "pexelsId": 577514
+    "source": "client-provided"
   },
   "outdoor-lighting": {
     "file": "outdoor-lighting.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 600,
+    "height": 450,
     "kind": "photo",
-    "pexelsId": 1793030
+    "source": "client-provided"
   },
   "landscape-lighting": {
     "file": "landscape-lighting.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 1024,
+    "height": 768,
     "kind": "photo",
-    "pexelsId": 265124
+    "source": "client-provided"
   },
   "security-lighting": {
     "file": "security-lighting.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 600,
+    "height": 450,
     "kind": "photo",
-    "pexelsId": 2085998
+    "source": "client-provided"
   },
   "commercial-electrical-services": {
     "file": "commercial-electrical-services.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 911,
+    "height": 683,
     "kind": "photo",
-    "pexelsId": 356040
+    "source": "client-provided"
   },
   "data-and-ethernet-wiring": {
     "file": "data-and-ethernet-wiring.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 444,
+    "height": 333,
     "kind": "photo",
-    "pexelsId": 821738
+    "source": "client-provided"
   },
   "parking-lot-lighting": {
     "file": "parking-lot-lighting.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 351,
+    "height": 263,
     "kind": "photo",
-    "pexelsId": 1036654
+    "source": "client-provided"
   },
   "smart-home-wiring": {
     "file": "smart-home-wiring.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 455,
+    "height": 341,
     "kind": "photo",
-    "pexelsId": 8960464
+    "source": "client-provided"
   },
   "fixture-and-chandelier-installation": {
     "file": "fixture-and-chandelier-installation.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 1024,
+    "height": 768,
     "kind": "photo",
-    "pexelsId": 271816
+    "source": "client-provided"
   },
   "electrical-troubleshooting": {
     "file": "electrical-troubleshooting.jpg",
-    "width": 640,
-    "height": 480,
+    "width": 800,
+    "height": 600,
     "kind": "photo",
-    "pexelsId": 19059594
+    "source": "approved-stock",
+    "pexelsId": 34054464
   }
 }

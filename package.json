@@ -9,7 +9,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "thumb-approval:sync": "node scripts/sync-approval-previews.mjs",
+    "thumb-approval:grid": "node scripts/generate-thumb-approval-grid.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",

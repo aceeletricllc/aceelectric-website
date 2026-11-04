@@ -22,3 +22,5 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+public/images/services/thumbs/_candidates/
+public/images/services/thumbs/_approval-preview-*.jpg
