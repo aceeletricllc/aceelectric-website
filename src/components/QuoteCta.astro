@@ -5,8 +5,8 @@ interface Props {
 }
 
 const {
-  heading = 'Ready for a clear quote?',
-  text = 'Tell us about your project and preferred contact method. We respond during business hours once your details are configured on this site.',
+  heading = 'Ready to talk about your project?',
+  text = 'Tell us about your property and preferred contact method. We respond during business hours.',
 } = Astro.props;
 ---
 
@@ -17,7 +17,7 @@ const {
       <p>{text}</p>
     </div>
     <div class="btn-row">
-      <a class="btn btn--primary" href="/contact">Request a Quote</a>
+      <a class="btn btn--primary" href="/contact">Contact us</a>
       <a class="btn btn--outline" href="/services">Browse services</a>
     </div>
   </div>
@@ -58,5 +58,21 @@ const {
   .quote-cta .btn--outline:hover {
     background: rgb(230 184 0 / 14%);
     color: var(--color-white);
+  }
+
+  @media (max-width: 639px) {
+    .quote-cta__inner {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .quote-cta .btn-row {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .quote-cta .btn-row .btn {
+      width: 100%;
+    }
   }
 </style>

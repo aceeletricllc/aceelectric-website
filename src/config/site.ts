@@ -35,7 +35,7 @@ export const footerServiceLinks = [
 export const llmsCuratedPages = [
   { title: 'Home', path: '/' },
   { title: 'Services', path: '/services' },
-  { title: 'Request a quote', path: '/contact' },
+  { title: 'Contact', path: '/contact' },
   { title: 'About', path: '/about' },
   { title: 'Privacy policy', path: '/privacy' },
 ] as const;

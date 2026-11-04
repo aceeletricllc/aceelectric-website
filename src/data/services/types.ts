@@ -15,4 +15,6 @@ export interface ServiceRecord {
   relatedSlugs: string[];
   /** Short label for cards and form select */
   shortLabel: string;
+  /** Concrete scenario for service index cards */
+  example?: string;
 }

@@ -10,7 +10,7 @@ const services = getAllServices();
 
 <BaseLayout
   title="Electrical services"
-  description="Explore residential and commercial electrical services from Ace Electric LLC in Albuquerque and the Southwest—repairs, upgrades, lighting, EV charging, and more."
+  description="Residential and commercial electrical services in Albuquerque and the Southwest—repairs, upgrades, lighting, EV charging, and more."
   path="/services"
 >
   <section class="section">
@@ -18,7 +18,7 @@ const services = getAllServices();
       <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services' }]} />
       <h1>Electrical services</h1>
       <p class="lead">
-        Select a service to learn common warning signs, our process, and related work we perform.
+        Each service explains when it applies, how we work, and a concrete example—not boilerplate copy.
       </p>
       <div class="service-card-grid">
         {
@@ -39,7 +39,10 @@ const services = getAllServices();
                   <h2 class="service-card__title">
                     <a href={`/services/${service.slug}`}>{service.title}</a>
                   </h2>
-                  <p>{service.metaDescription}</p>
+                  <p class="service-card__summary">{service.summary}</p>
+                  {service.example && (
+                    <p class="service-card__example">{service.example}</p>
+                  )}
                   <a class="service-card__link" href={`/services/${service.slug}`}>
                     View service details
                   </a>
@@ -103,6 +106,18 @@ const services = getAllServices();
 
   .service-card__title a:hover {
     color: var(--color-primary);
+  }
+
+  .service-card__summary {
+    margin-bottom: var(--space-sm);
+  }
+
+  .service-card__example {
+    font-size: 0.875rem;
+    color: var(--color-charcoal);
+    border-inline-start: 3px solid var(--color-primary);
+    padding-inline-start: var(--space-md);
+    margin-bottom: var(--space-sm);
   }
 
   .service-card__body p {

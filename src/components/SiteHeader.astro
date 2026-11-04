@@ -82,7 +82,7 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
           </a>
         )
       }
-      <a class="btn btn--primary" href="/contact">Request a Quote</a>
+      <a class="btn btn--primary" href="/contact">Contact us</a>
     </div>
 
     <details class="site-nav-mobile">
@@ -123,7 +123,7 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
               </a>
             )
           }
-          <a class="btn btn--primary" href="/contact">Request a Quote</a>
+          <a class="btn btn--primary" href="/contact">Contact us</a>
         </div>
       </div>
     </details>
@@ -143,6 +143,16 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
       trigger.setAttribute('aria-expanded', 'false');
     });
   }
+
+  const mobileNav = document.querySelector('.site-nav-mobile');
+  if (mobileNav instanceof HTMLDetailsElement) {
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && mobileNav.open) {
+        mobileNav.open = false;
+        mobileNav.querySelector('summary')?.focus();
+      }
+    });
+  }
 </script>
 
 <style>
@@ -154,6 +164,7 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
     color: var(--color-black);
     box-shadow: var(--shadow-sm);
     border-bottom: 4px solid var(--color-black);
+    padding-top: env(safe-area-inset-top, 0px);
   }
 
   .site-header a {
@@ -183,6 +194,18 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
     width: auto;
     height: clamp(4.5rem, 12vw, 6.75rem);
     max-width: min(420px, 72vw);
+  }
+
+  @media (max-width: 959px) {
+    .site-logo__img {
+      height: clamp(3.25rem, 14vw, 4.25rem);
+      max-width: min(280px, 58vw);
+    }
+
+    .site-header__inner {
+      min-height: var(--header-height);
+      flex-wrap: nowrap;
+    }
   }
 
   .site-nav__list {
@@ -304,6 +327,21 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
     border-radius: var(--radius-lg);
     padding: var(--space-md);
     box-shadow: var(--shadow-md);
+  }
+
+  @media (max-width: 959px) {
+    .site-nav-mobile[open] .site-nav-mobile__panel {
+      position: fixed;
+      left: var(--page-gutter);
+      right: var(--page-gutter);
+      top: calc(var(--header-height) + env(safe-area-inset-top, 0px) + 0.5rem);
+      width: auto;
+      max-height: min(
+        70vh,
+        calc(100dvh - var(--header-height) - var(--mobile-bar-height) - env(safe-area-inset-bottom, 0px) - 1.5rem)
+      );
+      z-index: 55;
+    }
   }
 
   .site-nav-mobile__panel ul {

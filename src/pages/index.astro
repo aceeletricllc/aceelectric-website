@@ -35,7 +35,7 @@ const featured = featuredSlugs
         communication.
       </p>
       <div class="btn-row">
-        <a class="btn btn--primary" href="/contact">Request a Quote</a>
+        <a class="btn btn--primary" href="/contact">Contact us</a>
         <a class="btn btn--secondary" href="/services">View services</a>
       </div>
       {
@@ -46,13 +46,16 @@ const featured = featuredSlugs
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <h2>Electrical services built for real buildings</h2>
-      <p class="lead">
-        From troubleshooting a stubborn circuit to planning a panel upgrade, we match the scope to your
-        property and timeline.
-      </p>
+  <section class="section section--skyline">
+    <div class="container section--skyline__inner">
+      <div class="section--skyline__intro">
+        <h2>Electrical work sized to the building</h2>
+        <p class="lead">
+          A Nob Hill casita, a Central Avenue retail bay, and a Rio Rancho family home do not share the
+          same panel, lighting, or code history. We scope each job from how the property is used—not a
+          generic checklist.
+        </p>
+      </div>
       <div class="card-grid">
         {
           featured.map((service) => (
@@ -60,7 +63,8 @@ const featured = featuredSlugs
               <h3>
                 <a href={`/services/${service.slug}`}>{service.title}</a>
               </h3>
-              <p>{service.summary.slice(0, 160)}…</p>
+              <p>{service.summary}</p>
+              {service.example && <p class="card__example">{service.example}</p>}
               <p>
                 <a href={`/services/${service.slug}`}>Learn more</a>
               </p>
@@ -104,6 +108,20 @@ const featured = featuredSlugs
     padding-block: var(--space-3xl);
   }
 
+  @media (max-width: 639px) {
+    .hero {
+      padding-block: var(--space-2xl);
+    }
+
+    .hero .btn-row {
+      flex-direction: column;
+    }
+
+    .hero .btn-row .btn {
+      width: 100%;
+    }
+  }
+
   .hero__inner {
     max-width: 40rem;
   }
@@ -130,6 +148,12 @@ const featured = featuredSlugs
 
   .home-more {
     margin-top: var(--space-xl);
+  }
+
+  .card__example {
+    font-size: 0.9375rem;
+    color: var(--color-charcoal);
+    margin-top: var(--space-sm);
   }
 
   .home-trust__list {

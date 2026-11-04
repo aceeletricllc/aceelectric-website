@@ -1,5 +1,7 @@
 import { writeFileSync } from 'node:fs';
 
+/** Do not run on production data — use scripts/apply-service-unique-content.mjs instead. */
+
 const slugs = [
   'emergency-electrical-services',
   'electrical-panel-upgrades',
@@ -129,7 +131,7 @@ const services = slugs.map((slug, i) => {
     slug,
     title,
     shortLabel: title,
-    metaDescription: `Professional ${lower} for homes and businesses. Safe, code-conscious work from Ace Electric LLC. Request a quote.`,
+    metaDescription: `Professional ${lower} for homes and businesses in Albuquerque and the Southwest.`,
     h1: title,
     summary: summaries[slug],
     warningSigns: [

@@ -42,8 +42,16 @@
   --mobile-bar-height: 4.5rem;
   --content-max: 72rem;
   --line-max: 42rem;
+  --page-gutter: 1rem;
 
   --focus-ring: 3px solid var(--color-accent);
+}
+
+@media (max-width: 959px) {
+  :root {
+    --header-height: 5.5rem;
+    --page-gutter: 0.875rem;
+  }
 }
 
 *,
@@ -54,6 +62,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -77,6 +86,9 @@ body {
   line-height: 1.6;
   color: var(--color-black);
   background: var(--color-surface);
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  text-wrap: pretty;
 }
 
 img,
@@ -118,21 +130,21 @@ a:hover {
 }
 
 .container {
-  width: min(100% - 2rem, var(--content-max));
+  width: min(100% - 2 * var(--page-gutter), var(--content-max));
   margin-inline: auto;
 }
 
 .container--narrow {
-  width: min(100% - 2rem, var(--line-max));
+  width: min(100% - 2 * var(--page-gutter), var(--line-max));
   margin-inline: auto;
 }
 
 .site-main {
   min-height: 50vh;
-  padding-bottom: calc(var(--mobile-bar-height) + var(--space-xl));
+  padding-bottom: calc(var(--mobile-bar-height) + env(safe-area-inset-bottom, 0px) + var(--space-xl));
 }
 
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .site-main {
     padding-bottom: var(--space-3xl);
   }
@@ -229,6 +241,16 @@ p {
   padding-block: var(--space-2xl);
 }
 
+@media (max-width: 639px) {
+  .section {
+    padding-block: var(--space-xl);
+  }
+
+  .section--skyline__intro {
+    padding: var(--space-md) var(--space-lg);
+  }
+}
+
 .section--dark {
   background: var(--color-black);
   color: var(--color-white);
@@ -236,6 +258,61 @@ p {
 
 .section--dark a {
   color: var(--color-accent);
+}
+
+.section--skyline {
+  position: relative;
+  isolation: isolate;
+  background: var(--color-surface);
+  padding-block: var(--space-2xl);
+}
+
+.section--skyline::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/images/home/abq-skyline-watermark.jpg') center 72% / cover no-repeat;
+  opacity: 0.13;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .section--skyline::before {
+    opacity: 0.16;
+  }
+}
+
+.section--skyline::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  box-shadow:
+    inset 0 4px 0 var(--color-primary),
+    inset 0 -4px 0 var(--color-primary);
+  opacity: 0.85;
+}
+
+.section--skyline__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.section--skyline__intro {
+  background: rgb(255 255 255 / 94%);
+  border: 1px solid rgb(0 0 0 / 8%);
+  border-inline-start: 4px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg) var(--space-xl);
+  margin-bottom: var(--space-xl);
+  max-width: 42rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.section--skyline__intro .lead {
+  margin-bottom: 0;
 }
 
 .card-grid {
@@ -312,6 +389,15 @@ p {
   border-radius: var(--radius-md);
   font: inherit;
   background: var(--color-white);
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    font-size: 1rem;
+  }
 }
 
 .form-field textarea {

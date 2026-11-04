@@ -11,8 +11,8 @@ const year = new Date().getFullYear();
     <div>
       <p class="site-footer__brand">{business.displayName}</p>
       <p class="site-footer__tagline">
-        Professional electrical services for residential and commercial properties. Request a quote
-        to discuss your project.
+        Professional electrical services for residential and commercial properties in Albuquerque
+        and the Southwest.
       </p>
     </div>
 
@@ -68,7 +68,7 @@ const year = new Date().getFullYear();
         {
           !isConfigured(business.phone) && !isConfigured(business.email) && (
             <li>
-              <a href="/contact">Request a quote online</a>
+              <a href="/contact">Contact us online</a>
             </li>
           )
         }
@@ -100,6 +100,21 @@ const year = new Date().getFullYear();
     color: var(--color-muted);
     padding-block: var(--space-2xl);
     margin-top: var(--space-2xl);
+    padding-bottom: calc(var(--space-2xl) + env(safe-area-inset-bottom, 0px));
+  }
+
+  @media (max-width: 959px) {
+    .site-footer {
+      padding-bottom: calc(
+        var(--space-2xl) + var(--mobile-bar-height) + env(safe-area-inset-bottom, 0px)
+      );
+    }
+  }
+
+  @media (min-width: 960px) {
+    .site-footer {
+      padding-bottom: calc(var(--space-2xl) + env(safe-area-inset-bottom, 0px));
+    }
   }
 
   .site-footer a {

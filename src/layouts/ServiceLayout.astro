@@ -46,6 +46,14 @@ const pageJsonLd = [
       <Breadcrumbs items={crumbs} />
       <h1>{service.h1}</h1>
       <p class="lead">{service.summary}</p>
+      {
+        service.example && (
+          <p class="service-example" role="note">
+            <strong>Example:</strong>{' '}
+            {service.example.replace(/^Example:\s*/i, '')}
+          </p>
+        )
+      }
 
       <section aria-labelledby="warning-signs">
         <h2 id="warning-signs">Signs you may need this service</h2>
@@ -92,12 +100,20 @@ const pageJsonLd = [
     </div>
   </article>
   <QuoteCta
-    heading={`Request a quote for ${service.title.toLowerCase()}`}
+    heading={`Questions about ${service.title.toLowerCase()}?`}
     text="Share photos, addresses, or inspection notes if you have them. We will follow up with next steps."
   />
 </BaseLayout>
 
 <style>
+  .service-example {
+    background: var(--color-surface);
+    border-inline-start: 4px solid var(--color-primary);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-xl);
+  }
+
   .faq-list {
     display: grid;
     gap: var(--space-md);
