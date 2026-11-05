@@ -7,20 +7,11 @@ const phoneReady = isConfigured(business.phone);
 const estimateHref = '/contact#quote-form';
 ---
 
-<section
-  class="home-hero"
-  aria-labelledby="home-hero-heading"
-  data-hero
-  data-hero-alts={JSON.stringify(homeHeroSlides.map((s) => s.alt))}
->
+<section class="home-hero" aria-labelledby="home-hero-heading" data-hero>
   <div class="home-hero__media" aria-hidden="true">
     {
       homeHeroSlides.map((slide, index) => (
-        <div
-          class="home-hero__slide"
-          data-hero-slide
-          data-active={index === 0 ? 'true' : 'false'}
-        >
+        <div class:list={['home-hero__slide', { 'is-active': index === 0 }]} data-hero-slide>
           <img
             src={slide.src}
             alt=""
@@ -35,8 +26,6 @@ const estimateHref = '/contact#quote-form';
     }
     <div class="home-hero__scrim" />
   </div>
-
-  <p class="visually-hidden" aria-live="polite" data-hero-status></p>
 
   <div class="container home-hero__content">
     <ul class="home-hero__badges" role="list">
@@ -135,6 +124,21 @@ const estimateHref = '/contact#quote-form';
     </div>
   </div>
 
+  <div class="home-hero__dots" role="tablist" aria-label="Hero image slides">
+    {
+      homeHeroSlides.map((slide, index) => (
+        <button
+          type="button"
+          class="home-hero__dot"
+          role="tab"
+          aria-selected={index === 0 ? 'true' : 'false'}
+          aria-label={`Slide ${index + 1}: ${slide.alt}`}
+          data-hero-dot={index}
+        />
+      ))
+    }
+  </div>
+
   <div class="home-hero__curve" aria-hidden="true">
     <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -145,17 +149,59 @@ const estimateHref = '/contact#quote-form';
   </div>
 </section>
 
-<script src="../scripts/home-hero.ts"></script>
+<script is:inline>
+  (function () {
+    function initHeroCarousel() {
+      var hero = document.querySelector('[data-hero]');
+      if (!hero) return;
+
+      var slides = hero.querySelectorAll('[data-hero-slide]');
+      var dots = hero.querySelectorAll('[data-hero-dot]');
+      if (slides.length < 2) return;
+
+      var index = 0;
+
+      function show(next) {
+        index = (next + slides.length) % slides.length;
+        for (var i = 0; i < slides.length; i += 1) {
+          slides[i].classList.toggle('is-active', i === index);
+        }
+        for (var j = 0; j < dots.length; j += 1) {
+          dots[j].setAttribute('aria-selected', j === index ? 'true' : 'false');
+        }
+      }
+
+      for (var d = 0; d < dots.length; d += 1) {
+        (function (dotIndex) {
+          dots[dotIndex].addEventListener('click', function () {
+            show(dotIndex);
+          });
+        })(d);
+      }
+
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      window.setInterval(function () {
+        show(index + 1);
+      }, 4000);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initHeroCarousel);
+    } else {
+      initHeroCarousel();
+    }
+  })();
+</script>
 
 <style>
   .home-hero {
     position: relative;
     isolation: isolate;
-    /* Shorter band shows more of each photo when using contain */
-    min-height: min(52vh, 26rem);
+    min-height: min(92vh, 44rem);
     display: flex;
     align-items: center;
-    padding-block: var(--space-xl) calc(var(--space-2xl) + 2.75rem);
+    padding-block: var(--space-2xl) calc(var(--space-3xl) + 3rem);
     color: var(--color-white);
     overflow: hidden;
   }
@@ -172,12 +218,9 @@ const estimateHref = '/contact#quote-form';
     inset: 0;
     opacity: 0;
     transition: opacity 1s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
-  .home-hero__slide[data-active='true'] {
+  .home-hero__slide.is-active {
     opacity: 1;
   }
 
@@ -190,7 +233,7 @@ const estimateHref = '/contact#quote-form';
   .home-hero__slide img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
   }
 
@@ -300,6 +343,40 @@ const estimateHref = '/contact#quote-form';
     color: var(--color-white);
   }
 
+  .home-hero__dots {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: 4.5rem;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--space-xs);
+  }
+
+  .home-hero__dot {
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 50%;
+    border: 1px solid var(--color-white);
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+    background-clip: content-box;
+    box-sizing: border-box;
+  }
+
+  .home-hero__dot[aria-selected='true'] {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  .home-hero__dot:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: 2px;
+  }
+
   .home-hero__curve {
     position: absolute;
     left: 0;
@@ -318,8 +395,12 @@ const estimateHref = '/contact#quote-form';
 
   @media (max-width: 639px) {
     .home-hero {
-      min-height: min(46vh, 22rem);
-      padding-block: var(--space-lg) calc(var(--space-xl) + 2.25rem);
+      min-height: min(88vh, 36rem);
+      padding-block: var(--space-xl) calc(var(--space-2xl) + 2.5rem);
+    }
+
+    .home-hero__dots {
+      bottom: 3.75rem;
     }
 
     .home-hero__actions {

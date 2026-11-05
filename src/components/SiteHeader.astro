@@ -52,45 +52,17 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
       <ul class="site-nav__list">
         {
           mainNav.map((item) => {
-            if (item.href !== '/services') {
-              const href = item.href;
-              const normalized = href.replace(/\/$/, '') || '/';
-              const isCurrent = currentPath === normalized;
-              return (
-                <li>
-                  <a href={href} aria-current={isCurrent ? 'page' : undefined}>
-                    {item.label}
-                  </a>
-                </li>
-              );
-            }
-
+            const href = item.href;
+            const normalized = href.replace(/\/$/, '') || '/';
+            const isCurrent =
+              href === '/services'
+                ? isServicesSection
+                : currentPath === normalized;
             return (
-              <li class="site-nav__item--services">
-                <a
-                  href="/services"
-                  class="site-nav__services-link"
-                  aria-current={isServicesSection ? 'page' : undefined}
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  id="services-nav-trigger"
-                >
-                  Services
+              <li>
+                <a href={href} aria-current={isCurrent ? 'page' : undefined}>
+                  {item.label}
                 </a>
-                <div class="services-dropdown" aria-labelledby="services-nav-trigger">
-                  <p class="services-dropdown__heading">
-                    <a href="/services">All services</a>
-                  </p>
-                  <ul class="services-dropdown__list">
-                    {
-                      services.map((service) => (
-                        <li>
-                          <a href={`/services/${service.slug}`}>{service.title}</a>
-                        </li>
-                      ))
-                    }
-                  </ul>
-                </div>
               </li>
             );
           })
@@ -119,17 +91,22 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
           {
             mainNav.map((item) =>
               item.href === '/services' ? (
-                <li class="site-nav-mobile__services">
-                  <a href="/services">Services</a>
-                  <ul>
-                    {
-                      services.map((service) => (
-                        <li>
-                          <a href={`/services/${service.slug}`}>{service.title}</a>
-                        </li>
-                      ))
-                    }
-                  </ul>
+                <li>
+                  <details class="site-nav-mobile__services">
+                    <summary>Services</summary>
+                    <ul>
+                      <li>
+                        <a href="/services">All services</a>
+                      </li>
+                      {
+                        services.map((service) => (
+                          <li>
+                            <a href={`/services/${service.slug}`}>{service.title}</a>
+                          </li>
+                        ))
+                      }
+                    </ul>
+                  </details>
                 </li>
               ) : (
                 <li>
@@ -156,46 +133,6 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
 </div>
 
 <script>
-  const servicesItem = document.querySelector('.site-nav__item--services');
-  const trigger = document.querySelector('#services-nav-trigger');
-  const dropdown = servicesItem?.querySelector('.services-dropdown');
-
-  let closeTimer;
-
-  function openServicesMenu() {
-    if (closeTimer) {
-      clearTimeout(closeTimer);
-      closeTimer = undefined;
-    }
-    servicesItem?.classList.add('is-services-open');
-    trigger?.setAttribute('aria-expanded', 'true');
-  }
-
-  function scheduleCloseServicesMenu() {
-    if (closeTimer) clearTimeout(closeTimer);
-    closeTimer = setTimeout(() => {
-      servicesItem?.classList.remove('is-services-open');
-      trigger?.setAttribute('aria-expanded', 'false');
-      closeTimer = undefined;
-    }, 280);
-  }
-
-  if (servicesItem instanceof HTMLElement && trigger instanceof HTMLElement) {
-    servicesItem.addEventListener('mouseenter', openServicesMenu);
-    servicesItem.addEventListener('mouseleave', scheduleCloseServicesMenu);
-
-    if (dropdown instanceof HTMLElement) {
-      dropdown.addEventListener('mouseenter', openServicesMenu);
-      dropdown.addEventListener('mouseleave', scheduleCloseServicesMenu);
-    }
-
-    trigger.addEventListener('focus', openServicesMenu);
-    servicesItem.addEventListener('focusout', (event) => {
-      if (event.relatedTarget instanceof Node && servicesItem.contains(event.relatedTarget)) return;
-      scheduleCloseServicesMenu();
-    });
-  }
-
   const mobileNav = document.querySelector('.site-nav-mobile');
   if (mobileNav instanceof HTMLDetailsElement) {
     document.addEventListener('keydown', (event) => {
@@ -328,85 +265,6 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
     font-weight: 600;
   }
 
-  .site-nav__item--services {
-    position: relative;
-  }
-
-  /* Keeps hover active while moving from the link down into the panel */
-  .site-nav__item--services::after {
-    content: '';
-    position: absolute;
-    left: -0.75rem;
-    right: -0.75rem;
-    top: 100%;
-    height: 0.75rem;
-  }
-
-  .site-nav__services-link {
-    display: inline-flex;
-    align-items: center;
-    min-height: 2.75rem;
-    font-weight: 600;
-  }
-
-  .services-dropdown {
-    display: none;
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    transform: translateX(-50%);
-    width: min(44rem, 92vw);
-    background: var(--color-white);
-    border: 2px solid var(--color-black);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    padding: var(--space-md);
-    z-index: 60;
-  }
-
-  /* Invisible bridge so the pointer can reach the panel without leaving hover */
-  .services-dropdown::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -0.65rem;
-    height: 0.65rem;
-  }
-
-  .site-nav__item--services.is-services-open .services-dropdown,
-  .site-nav__item--services:hover .services-dropdown,
-  .site-nav__item--services:focus-within .services-dropdown {
-    display: block;
-  }
-
-  .services-dropdown__heading {
-    margin: 0 0 var(--space-sm);
-    font-weight: 700;
-    border-bottom: 1px solid rgb(0 0 0 / 12%);
-    padding-bottom: var(--space-sm);
-  }
-
-  .services-dropdown__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    columns: 2;
-    column-gap: var(--space-lg);
-  }
-
-  .services-dropdown__list li {
-    break-inside: avoid;
-    margin-bottom: var(--space-xs);
-  }
-
-  .services-dropdown__list a {
-    display: block;
-    padding: 0.35rem 0;
-    font-size: 0.9375rem;
-    line-height: 1.35;
-  }
-
   .site-header__actions {
     display: none;
     align-items: center;
@@ -481,12 +339,40 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
     min-height: 2.75rem;
   }
 
-  .site-nav-mobile__services ul {
-    margin: 0 0 var(--space-md) var(--space-md);
+  .site-nav-mobile__services {
+    margin-bottom: var(--space-xs);
   }
 
-  .site-nav-mobile__services > a {
+  .site-nav-mobile__services summary {
+    cursor: pointer;
     font-weight: 700;
+    min-height: 2.75rem;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0.625rem 0;
+  }
+
+  .site-nav-mobile__services summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .site-nav-mobile__services summary::after {
+    content: '+';
+    margin-left: auto;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1;
+  }
+
+  .site-nav-mobile__services[open] summary::after {
+    content: '−';
+  }
+
+  .site-nav-mobile__services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-sm) var(--space-md);
   }
 
   @media (min-width: 960px) {
@@ -504,12 +390,6 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
 
     .site-header__inner {
       flex-wrap: nowrap;
-    }
-  }
-
-  @media (min-width: 1100px) {
-    .services-dropdown__list {
-      columns: 3;
     }
   }
 </style>
