@@ -39,6 +39,8 @@
   --shadow-md: 0 8px 24px rgb(0 0 0 / 22%);
 
   --header-height: 7.25rem;
+  --topbar-height: 2.5rem;
+  --sticky-header-total: calc(var(--topbar-height) + var(--header-height));
   --mobile-bar-height: 4.5rem;
   --content-max: 72rem;
   --line-max: 42rem;
@@ -110,6 +112,10 @@ a:hover {
 :focus-visible {
   outline: var(--focus-ring);
   outline-offset: 2px;
+}
+
+#quote-form {
+  scroll-margin-top: calc(var(--sticky-header-total) + var(--space-md));
 }
 
 .skip-link {

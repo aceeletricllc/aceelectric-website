@@ -10,7 +10,19 @@ const services = getAllServices();
 const isServicesSection = currentPath === '/services' || currentPath.startsWith('/services/');
 ---
 
-<header class="site-header">
+<div class="site-header-group">
+  <div class="site-topbar">
+    <div class="container site-topbar__inner">
+      <p class="site-topbar__text">
+        NM licensed electricians
+        <span class="site-topbar__sep" aria-hidden="true">•</span>
+        24+ years experience
+      </p>
+      <a class="site-topbar__cta" href="/contact#quote-form">Free estimates</a>
+    </div>
+  </div>
+
+  <header class="site-header">
   <div class="container site-header__inner">
     <a class="site-logo" href="/">
       <img
@@ -128,7 +140,8 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
       </div>
     </details>
   </div>
-</header>
+  </header>
+</div>
 
 <script>
   const servicesItem = document.querySelector('.site-nav__item--services');
@@ -183,10 +196,64 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
 </script>
 
 <style>
-  .site-header {
+  .site-header-group {
     position: sticky;
     top: 0;
     z-index: 50;
+  }
+
+  .site-topbar {
+    background: var(--color-navy-900);
+    color: var(--color-muted);
+    font-size: 0.8125rem;
+    border-bottom: 1px solid rgb(255 255 255 / 8%);
+  }
+
+  .site-topbar__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    min-height: 2.5rem;
+    padding-block: var(--space-xs);
+  }
+
+  .site-topbar__text {
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .site-topbar__sep {
+    margin-inline: 0.35rem;
+    color: var(--color-slate);
+  }
+
+  .site-topbar__cta {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    background: var(--color-accent);
+    color: var(--color-accent-text);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .site-topbar__cta:hover {
+    background: var(--color-accent-hover);
+    color: var(--color-accent-text);
+  }
+
+  .site-header {
+    position: relative;
+    top: auto;
     background: var(--color-white);
     color: var(--color-black);
     box-shadow: var(--shadow-sm);
@@ -380,7 +447,7 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
       position: fixed;
       left: var(--page-gutter);
       right: var(--page-gutter);
-      top: calc(var(--header-height) + env(safe-area-inset-top, 0px) + 0.5rem);
+      top: calc(var(--sticky-header-total) + env(safe-area-inset-top, 0px) + 0.5rem);
       width: auto;
       max-height: min(
         70vh,

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HomeHero from '../components/HomeHero.astro';
 import QuoteCta from '../components/QuoteCta.astro';
 import { business } from '../config/business';
 import { site } from '../config/site';
@@ -26,26 +27,7 @@ const featured = featuredSlugs
   path="/"
   includeLocalBusiness={true}
 >
-  <section class="hero">
-    <div class="container hero__inner">
-      <p class="hero__eyebrow">Residential & commercial electricians</p>
-      <h1>Power you can trust, work explained clearly</h1>
-      <p class="hero__lead">
-        Based in Albuquerque, {business.displayName} delivers panel upgrades, repairs, lighting, EV
-        charging, and code-conscious corrections across the Southwest with tidy workmanship and upfront
-        communication.
-      </p>
-      <div class="btn-row">
-        <a class="btn btn--primary" href="/contact">Contact us</a>
-        <a class="btn btn--secondary" href="/services">View services</a>
-      </div>
-      {
-        isConfigured(business.emergencyServiceAvailability) && (
-          <p class="hero__note">{business.emergencyServiceAvailability}</p>
-        )
-      }
-    </div>
-  </section>
+  <HomeHero />
 
   <section class="section">
     <div class="container">
@@ -102,53 +84,6 @@ const featured = featuredSlugs
 </BaseLayout>
 
 <style>
-  .hero {
-    background:
-      radial-gradient(circle at 85% 15%, rgb(178 34 34 / 28%), transparent 45%),
-      radial-gradient(circle at 10% 90%, rgb(230 184 0 / 15%), transparent 40%),
-      linear-gradient(165deg, var(--color-black), var(--color-navy-900));
-    color: var(--color-white);
-    padding-block: var(--space-3xl);
-  }
-
-  @media (max-width: 639px) {
-    .hero {
-      padding-block: var(--space-2xl);
-    }
-
-    .hero .btn-row {
-      flex-direction: column;
-    }
-
-    .hero .btn-row .btn {
-      width: 100%;
-    }
-  }
-
-  .hero__inner {
-    max-width: 40rem;
-  }
-
-  .hero__eyebrow {
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: 0.8125rem;
-    color: var(--color-accent);
-    font-weight: 700;
-    margin-bottom: var(--space-md);
-  }
-
-  .hero__lead {
-    font-size: 1.125rem;
-    color: var(--color-muted);
-  }
-
-  .hero__note {
-    margin-top: var(--space-lg);
-    font-size: 0.9375rem;
-    color: var(--color-accent);
-  }
-
   .home-more {
     margin-top: var(--space-xl);
   }

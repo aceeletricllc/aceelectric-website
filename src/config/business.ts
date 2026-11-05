@@ -36,7 +36,7 @@ export const business = {
   insuranceStatus: 'Insured and bonded' as ConfigValue,
   /** e.g. "24/7 emergency service available" — only when verified */
   emergencyServiceAvailability: 'TODO: confirm emergency service availability' as ConfigValue,
-  yearsInBusiness: 'TODO: add years in business if you want it published' as ConfigValue,
+  yearsInBusiness: '24+' as ConfigValue,
 
   socialProfiles: {
     facebook: 'TODO: add Facebook URL' as ConfigValue,
