@@ -7,7 +7,12 @@ const phoneReady = isConfigured(business.phone);
 const estimateHref = '/contact#quote-form';
 ---
 
-<section class="home-hero" aria-labelledby="home-hero-heading">
+<section
+  class="home-hero"
+  aria-labelledby="home-hero-heading"
+  data-hero
+  data-hero-alts={JSON.stringify(homeHeroSlides.map((s) => s.alt))}
+>
   <div class="home-hero__media" aria-hidden="true">
     {
       homeHeroSlides.map((slide, index) => (
@@ -140,59 +145,14 @@ const estimateHref = '/contact#quote-form';
   </div>
 </section>
 
-<script define:vars={{ slideAlts: homeHeroSlides.map((s) => s.alt) }}>
-  function initHomeHero() {
-    const root = document.querySelector('.home-hero');
-    if (!(root instanceof HTMLElement)) return;
-
-    const slides = Array.from(root.querySelectorAll('[data-hero-slide]'));
-    const status = root.querySelector('[data-hero-status]');
-    if (slides.length === 0) return;
-
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const durations = [4000, 8000, 12000];
-    let durationStep = 0;
-    let index = slides.findIndex((slide) => slide.getAttribute('data-active') === 'true');
-    if (index < 0) index = 0;
-
-    function announce() {
-      if (status && slideAlts[index]) {
-        status.textContent = `Showing photo ${index + 1} of ${slides.length}: ${slideAlts[index]}`;
-      }
-    }
-
-    function show(next) {
-      index = (next + slides.length) % slides.length;
-      slides.forEach((slide, i) => {
-        slide.setAttribute('data-active', i === index ? 'true' : 'false');
-      });
-      announce();
-    }
-
-    announce();
-
-    if (reducedMotion || slides.length < 2) return;
-
-    function scheduleNext() {
-      const delay = durations[durationStep % durations.length];
-      durationStep += 1;
-      window.setTimeout(() => {
-        show(index + 1);
-        scheduleNext();
-      }, delay);
-    }
-
-    scheduleNext();
-  }
-
-  initHomeHero();
-</script>
+<script src="../scripts/home-hero.ts"></script>
 
 <style>
   .home-hero {
     position: relative;
     isolation: isolate;
-    min-height: min(72vh, 34rem);
+    /* Shorter band shows more of each photo when using contain */
+    min-height: min(52vh, 26rem);
     display: flex;
     align-items: center;
     padding-block: var(--space-xl) calc(var(--space-2xl) + 2.75rem);
@@ -230,9 +190,8 @@ const estimateHref = '/contact#quote-form';
   .home-hero__slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
-    transform: scale(0.82);
   }
 
   .home-hero__scrim {
@@ -359,12 +318,8 @@ const estimateHref = '/contact#quote-form';
 
   @media (max-width: 639px) {
     .home-hero {
-      min-height: min(68vh, 30rem);
+      min-height: min(46vh, 22rem);
       padding-block: var(--space-lg) calc(var(--space-xl) + 2.25rem);
-    }
-
-    .home-hero__slide img {
-      transform: scale(0.78);
     }
 
     .home-hero__actions {
