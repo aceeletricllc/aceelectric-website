@@ -14,9 +14,21 @@ const isServicesSection = currentPath === '/services' || currentPath.startsWith(
   <div class="site-topbar">
     <div class="container site-topbar__inner">
       <p class="site-topbar__text">
-        NM licensed electricians
-        <span class="site-topbar__sep" aria-hidden="true">•</span>
-        24+ years experience
+        {
+          isConfigured(business.licenseNumber) ? (
+            <>
+              NM License #{business.licenseNumber}
+              <span class="site-topbar__sep" aria-hidden="true">•</span>
+              24+ years experience
+            </>
+          ) : (
+            <>
+              NM licensed electricians
+              <span class="site-topbar__sep" aria-hidden="true">•</span>
+              24+ years experience
+            </>
+          )
+        }
       </p>
       <a class="site-topbar__cta" href="/contact#quote-form">Free estimates</a>
     </div>
